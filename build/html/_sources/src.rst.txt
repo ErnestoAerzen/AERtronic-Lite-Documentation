@@ -1,9 +1,6 @@
 src
 =====
 
-AERtronic Basic: MCU-Nextion Command Communication
-==================================================
-
 Project Overview
 ----------------
 
