@@ -41,6 +41,7 @@ Additionally, specific conditions trigger actions such as returning to the home 
 This section provides an overview of the core functionality of the AERtronic Basic sketch. For more detailed explanations of individual functions, specific page operations, and code segments, refer to subsequent sections.
 
 .. code-block:: cpp
+
     //Insert header files here:
     #include "Functions.hpp"
     #include "Functionality.hpp"
@@ -196,3 +197,31 @@ This section provides an overview of the core functionality of the AERtronic Bas
         //Repeats the loop function every time after the delay, 1000=1 seg because of the ESP32 time rtc functions to store time and date every second:
         delay(1000);
     }
+
+Header Declarations for Main Program Logic
+------------------------------------------
+
+This section outlines the header declarations for the main program logic of the AERtronic Basic sketch. The declarations are included in the `main.hpp` header file and serve as the interface to the primary functions `mainSetup()` and `mainLoop()`, which orchestrate the communication and interaction between an ESP32 microcontroller unit (MCU) and a Nextion display.
+
+**Code Overview:**
+
+`mainSetup()`
+--------------
+
+The `mainSetup()` function is responsible for initializing essential components and setting up the system for operation. It performs tasks such as configuring serial communication, initializing digital inputs and outputs, synchronizing time with the Nextion display, and preparing namespaces and preferences. A delay is included to ensure stability.
+
+`mainLoop()`
+-------------
+
+The `mainLoop()` function manages the ongoing operation of the sketch. It executes common functions for all pages, handles page-specific operations based on the current display page, and manages various conditions such as warnings, errors, and maintenance messages. The loop maintains a one-second interval using a delay.
+
+The `main.hpp` header file serves as the entry point for these functions and encapsulates the core logic of the AERtronic Basic sketch.
+
+For comprehensive details on the implementation of `mainSetup()` and `mainLoop()`, as well as their roles in establishing MCU-Nextion communication and interaction, refer to the subsequent sections for more in-depth explanations and code segments.
+
+.. code-block:: cpp
+
+    #include <Arduino.h>
+
+    void mainSetup();
+    void mainLoop();

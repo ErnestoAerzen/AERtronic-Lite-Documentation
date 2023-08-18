@@ -19,7 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="src" href="src.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,11 +43,20 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="src.html">src</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">main</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main-program-logic-for-mcu-nextion-command-communication">Main Program Logic for MCU-Nextion Command Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mainsetup"><cite>mainSetup()</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mainloop"><cite>mainLoop()</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#header-declarations-for-main-program-logic">Header Declarations for Main Program Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1"><cite>mainSetup()</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2"><cite>mainLoop()</cite></a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -108,13 +118,193 @@
 </ul>
 <p>Additionally, specific conditions trigger actions such as returning to the home page in the event of warnings or errors, sending Modbus data if enabled, and displaying maintenance messages.</p>
 <p>This section provides an overview of the core functionality of the AERtronic Basic sketch. For more detailed explanations of individual functions, specific page operations, and code segments, refer to subsequent sections.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//Insert header files here:</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Functions.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Functionality.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Inputs.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Outputs.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;timeESP.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;preferences.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pages.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ModbusESP32.hpp&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">mainSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Initializes serial communication at the desire baud rate:</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//Set the digital inputs &amp; outputs:</span>
+<span class="w">    </span><span class="n">inputsFunc</span><span class="p">();</span>
+<span class="w">    </span><span class="n">outputFunc</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//Waits until receives time and date from Nextion display</span>
+<span class="w">    </span><span class="n">receiveTime</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//Initializes the namespaces that stores every time the ESP32 is booted and the maintenance registers:</span>
+<span class="w">    </span><span class="n">bootCounter</span><span class="p">(</span><span class="n">preferences</span><span class="p">,</span><span class="w"> </span><span class="n">register1</span><span class="p">,</span><span class="w"> </span><span class="n">events</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//Including a delay time for stability</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">mainLoop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Functions that executes in all pages:</span>
+<span class="w">    </span><span class="c1">//Function that sends/receives serial data</span>
+<span class="w">    </span><span class="n">serialRead</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Internal clock and updates variables to store in NVS memory</span>
+<span class="w">    </span><span class="n">opTime</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Always read sensor</span>
+<span class="w">    </span><span class="n">analogValue</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//Functions that executes in each page:</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">currentPage</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">HOME</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Functions that read analog values</span>
+<span class="w">        </span><span class="c1">//analogValue();</span>
+<span class="w">        </span><span class="n">printAnalogValuesHome</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Displays the current time and date in the home page</span>
+<span class="w">        </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc_current</span><span class="p">);</span>
+<span class="w">        </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc_current</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">PRESSURE</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Function that reads analog value only for pressure sensors</span>
+<span class="w">        </span><span class="c1">//analogValue();</span>
+<span class="w">        </span><span class="n">printAnalogValuesPressure</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Displays the current time and date in the pressure page</span>
+<span class="w">        </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc_current</span><span class="p">);</span>
+<span class="w">        </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc_current</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">TEMP</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Function that reads analog values only for temperature sensors</span>
+<span class="w">        </span><span class="c1">//analogValue();</span>
+<span class="w">        </span><span class="n">printAnalogValuesTemp</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Displays the current time and date in the temp page</span>
+<span class="w">        </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc_current</span><span class="p">);</span>
+<span class="w">        </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc_current</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">MEN</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Only calls the function if the page is 24/Mensajes:</span>
+<span class="w">        </span><span class="n">page24</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">PAGETIMES</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the time to the display</span>
+<span class="w">        </span><span class="n">printopTime</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">INTERVALOS</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the maintenance intervals:</span>
+<span class="w">        </span><span class="n">printInterval1</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">EVENTS</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the stored events:</span>
+<span class="w">        </span><span class="c1">// First parameter = number of places in the event log, second parameter = page number</span>
+<span class="w">        </span><span class="n">printEvents</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">EVENTS2</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the stored events:</span>
+<span class="w">        </span><span class="n">printEvents</span><span class="p">(</span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">EVENTS3</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the stored events:</span>
+<span class="w">        </span><span class="n">printEvents</span><span class="p">(</span><span class="mi">39</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">EVENTS4</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the stored events:</span>
+<span class="w">        </span><span class="n">printEvents</span><span class="p">(</span><span class="mi">52</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">EVENTS5</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the stored events:</span>
+<span class="w">        </span><span class="n">printEvents</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">EVENTS6</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the stored events:</span>
+<span class="w">        </span><span class="n">printEvents</span><span class="p">(</span><span class="mi">78</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">EVENTS7</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the stored events:</span>
+<span class="w">        </span><span class="n">printEvents</span><span class="p">(</span><span class="mi">91</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">RESET_EV</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Function to delete events</span>
+<span class="w">        </span><span class="n">deleteEvents</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">RESET_MANT</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Function to delete maintenance registers</span>
+<span class="w">        </span><span class="n">deleteRegisters</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ADVERTENCIA</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Reboots the system to change time and date</span>
+<span class="w">        </span><span class="n">rebootSystem</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">ESTADO</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Reads the digital inputs and outputs</span>
+<span class="w">        </span><span class="n">readInputs</span><span class="p">();</span>
+<span class="w">        </span><span class="n">outputStatus</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">MEMORY</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the state of the memory over serial</span>
+<span class="w">        </span><span class="n">printMemory</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">MODBUS</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Sends the current data to the comunacion page</span>
+<span class="w">        </span><span class="n">printModbus</span><span class="p">();</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">CONFIRM</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">//Prints the number of maintenances</span>
+<span class="w">        </span><span class="n">printMaintenances</span><span class="p">();</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Goes back to the home page if there is a warning or error</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">currentPage</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">HOME</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">potValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3000</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">potValue2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3000</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">potValue3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3000</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;page Home&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Modbus functionality</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">modbusStatus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">sendModbus</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Sends a message to indicate that a maintenance is required</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">mhours</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printMaintenanceMessage</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Repeats the loop function every time after the delay, 1000=1 seg because of the ESP32 time rtc functions to store time and date every second:</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="header-declarations-for-main-program-logic">
+<h2>Header Declarations for Main Program Logic<a class="headerlink" href="#header-declarations-for-main-program-logic" title="Permalink to this heading"></a></h2>
+<p>This section outlines the header declarations for the main program logic of the AERtronic Basic sketch. The declarations are included in the <cite>main.hpp</cite> header file and serve as the interface to the primary functions <cite>mainSetup()</cite> and <cite>mainLoop()</cite>, which orchestrate the communication and interaction between an ESP32 microcontroller unit (MCU) and a Nextion display.</p>
+<p><strong>Code Overview:</strong></p>
+</section>
+<section id="id1">
+<h2><cite>mainSetup()</cite><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>The <cite>mainSetup()</cite> function is responsible for initializing essential components and setting up the system for operation. It performs tasks such as configuring serial communication, initializing digital inputs and outputs, synchronizing time with the Nextion display, and preparing namespaces and preferences. A delay is included to ensure stability.</p>
+</section>
+<section id="id2">
+<h2><cite>mainLoop()</cite><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>The <cite>mainLoop()</cite> function manages the ongoing operation of the sketch. It executes common functions for all pages, handles page-specific operations based on the current display page, and manages various conditions such as warnings, errors, and maintenance messages. The loop maintains a one-second interval using a delay.</p>
+<p>The <cite>main.hpp</cite> header file serves as the entry point for these functions and encapsulates the core logic of the AERtronic Basic sketch.</p>
+<p>For comprehensive details on the implementation of <cite>mainSetup()</cite> and <cite>mainLoop()</cite>, as well as their roles in establishing MCU-Nextion communication and interaction, refer to the subsequent sections for more in-depth explanations and code segments.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">mainSetup</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mainLoop</span><span class="p">();</span>
+</pre></div>
+</div>
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="src.html" class="btn btn-neutral float-left" title="src" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
