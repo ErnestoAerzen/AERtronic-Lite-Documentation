@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modbus &mdash; AERtronic-Lite-Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Inputs" href="inputs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AERtronic-Lite-Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.html">Src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionality.html">Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Inputs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modbus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modbus-communication-and-control-code">Modbus Communication and Control Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modbus-communication-and-control-header">Modbus Communication and Control Header</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AERtronic-Lite-Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Modbus</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modbus.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modbus">
+<h1>Modbus<a class="headerlink" href="#modbus" title="Permalink to this heading"></a></h1>
+<section id="modbus-communication-and-control-code">
+<h2>Modbus Communication and Control Code<a class="headerlink" href="#modbus-communication-and-control-code" title="Permalink to this heading"></a></h2>
+<p>This section introduces a source code file named <cite>ModbusESP32.hpp</cite>. This file handles Modbus communication using the ModbusMaster library and controls Modbus-related operations within the AERtronic Basic sketch.</p>
+<p><strong>Code Overview:</strong></p>
+<p>The <cite>ModbusESP32.hpp</cite> source code file includes the following significant components:</p>
+<ol class="arabic simple">
+<li><p><strong>Include Statements:</strong></p></li>
+</ol>
+<p>The header file includes relevant libraries required for Modbus communication and functionality, such as <cite>&lt;ModbusMaster.h&gt;</cite>, “Outputs.hpp,” and “Functions.hpp.”</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Modbus Configuration:</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Definitions for MAX485 DE (Data Enable) and RE_NEG (Receive Enable) pins are provided using the <cite>#define</cite> directive.</p></li>
+<li><p>An instance of the <cite>ModbusMaster</cite> class, named <cite>node</cite>, is created to manage Modbus communication.</p></li>
+<li><p>A boolean variable, <cite>modbusStatus</cite>, is declared to store the status of Modbus communication (active or inactive).</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Modbus Initialization:</strong></p></li>
+</ol>
+<p>The function <cite>setUpModbus()</cite> is defined to set up the Modbus communication. This includes configuring the MAX485 pins, initializing the serial communication, and starting Modbus communication with a specific slave ID.</p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Sending Modbus Data:</strong></p></li>
+</ol>
+<p>The function <cite>sendModbus()</cite> is defined to send Modbus data. The appropriate data value (<cite>200</cite>, <cite>300</cite>, or <cite>400</cite>) is determined based on the <cite>statusDigital</cite> variable. The function sends the data to a specific register using the <cite>node.writeSingleRegister()</cite> function and provides appropriate feedback messages.</p>
+<ol class="arabic simple" start="5">
+<li><p><strong>Printing Modbus Data:</strong></p></li>
+</ol>
+<p>The function <cite>printModbus()</cite> prints the current Modbus data value to a designated display element on the Nextion display. This function updates the graphical representation of Modbus communication status.</p>
+<p>This section provides a concise summary of the key components and functionality of the <cite>ModbusESP32.hpp</cite> source code file. For a detailed understanding of the code implementation and its interactions, refer to the subsequent sections.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ModbusESP32.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ModbusMaster.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Outputs.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Functions.hpp&quot;</span>
+
+<span class="c1">//Definition of pin DE of module MAX485 (TX)</span>
+<span class="cp">#define MAX485_DE 17</span>
+<span class="c1">//Definition of pin RE_NEG of module MAX485 (RX)</span>
+<span class="cp">#define MAX485_RE__NEG 16</span>
+
+<span class="c1">//Creation of an instance of ModbusMaster</span>
+<span class="n">ModbusMaster</span><span class="w"> </span><span class="n">node</span><span class="p">;</span>
+
+<span class="c1">//Variable to store the status of Modbus(active or inactive)</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">modbusStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="c1">//Sends data over Modbus RTU: 200-Ok, 300-Warning, 400-Error</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//Update this value according to what is needed!!!</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setUpModbus</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Configure pins MAX485_RE__NEG and MAX485_DE as outputs</span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">MAX485_RE__NEG</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">MAX485_DE</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Set pin RE_NEG as HIGH (Disable reception)</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">MAX485_RE__NEG</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Set pin DE as HIGH (Enable transmission)</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">MAX485_DE</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//Begin serial communication at 115200 baud rate:</span>
+<span class="w">    </span><span class="n">Serial2</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Waits until Serial2 port opens:</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">Serial2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Start Modbus RTUcommunication with slave id = 1</span>
+<span class="w">    </span><span class="n">node</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Serial2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">sendModbus</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// Verificar si se ha presentado un evento en el sistema</span>
+<span class="w">    </span><span class="c1">// Por ejemplo, si un sensor ha detectado un valor fuera de los límites normales</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">statusDigital</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">statusDigital</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">statusDigital</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">400</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Sends the value of data to the 0 register of the slave</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="n">writeSingleRegister</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="n">ku8MBSuccess</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Prints a succesful message of transmission</span>
+<span class="w">        </span><span class="n">Serial2</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Succesful data sent&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Print a failure message of transmission</span>
+<span class="w">        </span><span class="n">Serial2</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Unable to send data, result = &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Prints the result of the operation:</span>
+<span class="w">        </span><span class="n">Serial2</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;fill 700,455,100,25,65535&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;xstr 700,445,100,25,6,RED,65535,1,1,3,</span><span class="se">\&quot;</span><span class="s">Modbus On</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">printModbus</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Comunicacion.tm.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="modbus-communication-and-control-header">
+<h2>Modbus Communication and Control Header<a class="headerlink" href="#modbus-communication-and-control-header" title="Permalink to this heading"></a></h2>
+<p>This section introduces a header file named <cite>ModbusESP32.hpp</cite>. This header file declares function prototypes and global variables related to Modbus communication and control within the AERtronic Basic sketch.</p>
+<p><strong>Header Overview:</strong></p>
+<p>The header file includes the following significant declarations:</p>
+<ol class="arabic simple">
+<li><p><strong>Function Prototypes:</strong></p></li>
+</ol>
+<p>The header declares three functions that are crucial for Modbus communication and control:</p>
+<ul class="simple">
+<li><p><cite>setUpModbus()</cite>: This function sets up the Modbus communication by configuring the necessary pins, initializing serial communication, and starting Modbus communication with a specific slave ID.</p></li>
+<li><p><cite>sendModbus()</cite>: This function sends Modbus data based on the current <cite>statusDigital</cite> value. The data is sent to a specific register using the ModbusMaster library functions.</p></li>
+<li><p><cite>printModbus()</cite>: This function prints the current Modbus data value to a designated display element on the Nextion display.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>Global Variables:</strong></p></li>
+</ol>
+<p>The header declares the following global variables:</p>
+<ul class="simple">
+<li><p><cite>modbusStatus</cite>: A boolean variable that stores the status of Modbus communication (active or inactive).</p></li>
+<li><p><cite>data</cite>: An integer variable that holds the data value to be sent over Modbus. The value is determined based on the <cite>statusDigital</cite> variable.</p></li>
+</ul>
+<p>These function prototypes and global variables are essential components of Modbus communication and control in the AERtronic Basic sketch. They enable effective interaction with Modbus devices and update the Nextion display with relevant information.</p>
+<p>This section provides a concise overview of the function prototypes and global variables declared in the <cite>ModbusESP32.hpp</cite> header file. For a comprehensive understanding of how these components are utilized and their interactions within the sketch, refer to the subsequent sections.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setUpModbus</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">sendModbus</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printModbus</span><span class="p">();</span>
+
+<span class="k">extern</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">modbusStatus</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="inputs.html" class="btn btn-neutral float-left" title="Inputs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ernesto Estrada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
