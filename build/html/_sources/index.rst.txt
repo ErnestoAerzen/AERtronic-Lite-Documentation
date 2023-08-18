@@ -30,6 +30,7 @@ Check out the :doc:`usage` section for further information, including how to
    modbus
    outputs
    pages
+   preferences
 
 Indices and tables
 ==================

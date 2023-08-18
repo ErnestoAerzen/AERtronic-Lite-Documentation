@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preferences &mdash; AERtronic-Lite-Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Pages" href="pages.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AERtronic-Lite-Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.html">Src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionality.html">Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus.html">Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Pages</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preferences-management-and-information-display">Preferences Management and Information Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#header-dependencies">Header Dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#printinterval1"><cite>printInterval1()</cite></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#printmemory"><cite>printMemory()</cite></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#global-variables">Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#function-dependencies">Function Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#header-file-description-preferences-management-and-system-information-display">Header File Description: Preferences Management and System Information Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Header Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#global-variables-and-extern-declarations">Global Variables and Extern Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#function-declarations">Function Declarations</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AERtronic-Lite-Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Preferences</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/preferences.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="preferences">
+<h1>Preferences<a class="headerlink" href="#preferences" title="Permalink to this heading"></a></h1>
+<section id="preferences-management-and-information-display">
+<h2>Preferences Management and Information Display<a class="headerlink" href="#preferences-management-and-information-display" title="Permalink to this heading"></a></h2>
+<p>This code file serves as an interface for managing preferences, recording maintenance data, and displaying system information on a device using the Preferences library. It features functions to initialize preferences, track operation hours, and provide memory status information.</p>
+</section>
+<section id="header-dependencies">
+<h2>Header Dependencies<a class="headerlink" href="#header-dependencies" title="Permalink to this heading"></a></h2>
+<p>Preferences.h: Header file of the Preferences library, providing support for saving key-value pairs in flash memory.</p>
+<p>Functions.hpp: Custom header containing function prototypes and necessary dependencies.</p>
+<p>Functions
+bootCounter(object, object2, object3)</p>
+<p>Initializes preferences instances and manages data related to system counters and maintenance records. This function handles the incrementation of a reboot counter, maintains maintenance-related variables, and retrieves information about the number of system events. It facilitates organized data storage in flash memory and supports proper system operation tracking.</p>
+<section id="printinterval1">
+<h3><cite>printInterval1()</cite><a class="headerlink" href="#printinterval1" title="Permalink to this heading"></a></h3>
+<p>This function sends maintenance interval information to an output source, likely a display. It communicates the number of operation hours and lubrication hours of the machine’s motor, as well as operation hours thresholds before specific milestones (4000h and 8000h). The data is presented in a user-friendly format, aiding users in tracking maintenance schedules.</p>
+</section>
+<section id="printmemory">
+<h3><cite>printMemory()</cite><a class="headerlink" href="#printmemory" title="Permalink to this heading"></a></h3>
+<p>Offering insight into memory usage, this function communicates various memory-related metrics over a serial connection. The metrics include the amount of free heap memory, flash chip size, sketch size, and the number of free entries in different preference namespaces (preferences, register1, and events). The function contributes to system monitoring and optimization efforts.</p>
+</section>
+</section>
+<section id="global-variables">
+<h2>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>preferences</cite>: An instance of the Preferences library used for storing and retrieving key-value pairs.</p></li>
+<li><p><cite>register1</cite>: Another instance of the Preferences library intended for managing maintenance-related data.</p></li>
+<li><p><cite>events</cite>: An instance of the Preferences library designed for handling system event data.</p></li>
+<li><p><cite>mhours</cite>: An integer variable storing the number of operation hours.</p></li>
+<li><p><cite>mmotor</cite>: An integer variable storing the number of operation hours of the motor.</p></li>
+<li><p><cite>lmotor</cite>: An integer variable storing the number of lubrication hours of the motor.</p></li>
+<li><p><cite>m4hours</cite>: An integer variable storing the number of operation hours before 4000 hours.</p></li>
+<li><p><cite>m8hours</cite>: An integer variable storing the number of operation hours before 8000 hours.</p></li>
+<li><p><cite>numberOfMaintenance</cite>: An integer variable holding the count of maintenance records.</p></li>
+<li><p><cite>contador</cite>: An integer variable used to keep track of the number of system events.</p></li>
+</ul>
+</section>
+<section id="function-dependencies">
+<h2>Function Dependencies<a class="headerlink" href="#function-dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>Functions.hpp</cite>: Custom header containing necessary function prototypes and dependencies.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Preferences.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Functions.hpp&quot;</span>
+
+<span class="c1">//Initiate an instance of Preference library</span>
+<span class="n">Preferences</span><span class="w"> </span><span class="n">preferences</span><span class="p">;</span>
+<span class="n">Preferences</span><span class="w"> </span><span class="n">register1</span><span class="p">;</span>
+<span class="n">Preferences</span><span class="w"> </span><span class="n">events</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mhours</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mmotor</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">lmotor</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">m4hours</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">m8hours</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">numberOfMaintenance</span><span class="p">;</span>
+<span class="c1">//Counter to store the number of system events</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">bootCounter</span><span class="p">(</span><span class="n">Preferences</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">Preferences</span><span class="w"> </span><span class="n">object2</span><span class="p">,</span><span class="w"> </span><span class="n">Preferences</span><span class="w"> </span><span class="n">object3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Creates a storage space in flash memory called &quot;counter&quot;, false = read/write mode</span>
+<span class="w">    </span><span class="n">object</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;counter&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Get the value of the counter key saved on preferences. If it doesn’t find any value, it returns 0 by default</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&quot;counter&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Adds one every time the ESP32 is rebooted</span>
+<span class="w">    </span><span class="n">counter</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">//Store the new value on the “counter” key:</span>
+<span class="w">    </span><span class="n">object</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;counter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">counter</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Close the preferences</span>
+<span class="w">    </span><span class="n">object</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">//Space in memory to store the maintenance registers:</span>
+<span class="w">    </span><span class="n">object2</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;maintenance&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Key to store the number of operation hours</span>
+<span class="w">    </span><span class="n">mhours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object2</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&quot;reg1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Key to store the number of the operatino hours of the motor</span>
+<span class="w">    </span><span class="n">mmotor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object2</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&quot;reg2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Key to store the number of lubrication hours of the motor</span>
+<span class="w">    </span><span class="n">lmotor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object2</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&quot;reg3&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Key to save the number of operation hours before 4000h</span>
+<span class="w">    </span><span class="n">m4hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object2</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&quot;reg4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Key to store the number of operation hours before 8000h</span>
+<span class="w">    </span><span class="n">m8hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object2</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&quot;reg5&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">numberOfMaintenance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object2</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&quot;numOfMt&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//Space in memory to store the total of system events</span>
+<span class="w">    </span><span class="n">object3</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span><span class="n">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">object3</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Sends the maintenance intervals:</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printInterval1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Sends the number of operation hours of the machine:</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Intervalos.tman1.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">mhours</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; h&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Sends the number of operation hours of the motor:</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Intervalos.tman2.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">mmotor</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; h&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Sends the number of lubrication hours of the motor</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Intervalos.tman3.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">lmotor</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; h&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Sends the number of operatino hours before 4000h</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Intervalos.tman4.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">m4hours</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; h&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Sends the number of operatino hours before 8000h</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Intervalos.tman5.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">m8hours</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; h&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Sends the state of the memory over serial</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printMemory</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Memoria.tmem1.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">ESP</span><span class="p">.</span><span class="n">getFreeHeap</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Memoria.tmem2.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">ESP</span><span class="p">.</span><span class="n">getFlashChipSize</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Memoria.tmem3.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">ESP</span><span class="p">.</span><span class="n">getSketchSize</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">free_entries_preferences</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">preferences</span><span class="p">.</span><span class="n">freeEntries</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Memoria.tmem4.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">free_entries_preferences</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">free_entries_register1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">register1</span><span class="p">.</span><span class="n">freeEntries</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Memoria.tmem5.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">free_entries_register1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">free_entries_events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">events</span><span class="p">.</span><span class="n">freeEntries</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Memoria.tmem6.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">free_entries_events</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Memoria.n0.val=usize&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="header-file-description-preferences-management-and-system-information-display">
+<h2>Header File Description: Preferences Management and System Information Display<a class="headerlink" href="#header-file-description-preferences-management-and-system-information-display" title="Permalink to this heading"></a></h2>
+<p>This header file serves as an interface for managing preferences, recording maintenance data, and displaying system information on a device utilizing the ESP32 preferences library. It includes declarations for global variables, as well as function prototypes related to managing preferences and providing system information.</p>
+</section>
+<section id="id1">
+<h2>Header Dependencies<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>Arduino.h</cite>: The header file that includes standard definitions for the Arduino framework.</p></li>
+<li><p><cite>Preferences.h</cite>: Header file of the ESP32 preferences library, which provides functionality for storing and retrieving data in flash memory.</p></li>
+<li><p><cite>esp_heap_caps.h</cite>: Header file that provides access to heap memory capabilities in the ESP32.</p></li>
+<li><p><cite>EEPROM.h</cite>: Header file for the EEPROM library, which allows reading and writing data to non-volatile memory on the microcontroller.</p></li>
+</ul>
+</section>
+<section id="global-variables-and-extern-declarations">
+<h2>Global Variables and Extern Declarations<a class="headerlink" href="#global-variables-and-extern-declarations" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>preferences</cite>: An instance of the ESP32 preferences library used for storing and retrieving key-value pairs in flash memory.</p></li>
+<li><p><cite>register1</cite>: Another instance of the ESP32 preferences library intended for managing maintenance-related data.</p></li>
+<li><p><cite>events</cite>: An instance of the ESP32 preferences library designed for handling system event data.</p></li>
+<li><p><cite>mhours</cite>: An integer variable storing the number of operation hours.</p></li>
+<li><p><cite>mmotor</cite>: An integer variable storing the number of operation hours of the motor.</p></li>
+<li><p><cite>lmotor</cite>: An integer variable storing the number of lubrication hours of the motor.</p></li>
+<li><p><cite>m4hours</cite>: An integer variable storing the number of operation hours before 4000 hours.</p></li>
+<li><p><cite>m8hours</cite>: An integer variable storing the number of operation hours before 8000 hours.</p></li>
+<li><p><cite>contador</cite>: An integer variable used to keep track of the number of system events.</p></li>
+<li><p><cite>numberOfMaintenance</cite>: An integer variable holding the count of maintenance records.</p></li>
+</ul>
+</section>
+<section id="function-declarations">
+<h2>Function Declarations<a class="headerlink" href="#function-declarations" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>bootCounter(Preferences object, Preferences object2, Preferences object3)</cite>: Initializes preferences instances and manages data related to system counters and maintenance records. This function handles the incrementation of a reboot counter, maintains maintenance-related variables, and retrieves information about the number of system events. It facilitates organized data storage in flash memory and supports proper system operation tracking.</p></li>
+<li><p><cite>printInterval1()</cite>: Sends maintenance interval information to an output source, likely a display. It communicates the number of operation hours and lubrication hours of the machine’s motor, as well as operation hours thresholds before specific milestones (4000h and 8000h). The data is presented in a user-friendly format, aiding users in tracking maintenance schedules.</p></li>
+<li><p><cite>printMemory()</cite>: Offers insight into memory usage, communicating various memory-related metrics over a serial connection. The metrics include the amount of free heap memory, flash chip size, sketch size, and the number of free entries in different preference namespaces (preferences, register1, and events). This function contributes to system monitoring and optimization efforts.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+<span class="c1">//Including ESP32 preferences library to store data on flash memory</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Preferences.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;esp_heap_caps.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;EEPROM.h&gt;</span>
+
+<span class="c1">//Initiate an instance of Preference library</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">Preferences</span><span class="w"> </span><span class="n">preferences</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">Preferences</span><span class="w"> </span><span class="n">register1</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">Preferences</span><span class="w"> </span><span class="n">events</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mhours</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mmotor</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lmotor</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m4hours</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m8hours</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numberOfMaintenance</span><span class="p">;</span>
+
+<span class="c1">//Function declarations:</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">bootCounter</span><span class="p">(</span><span class="n">Preferences</span><span class="w"> </span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">Preferences</span><span class="w"> </span><span class="n">object2</span><span class="p">,</span><span class="w"> </span><span class="n">Preferences</span><span class="w"> </span><span class="n">object3</span><span class="p">);</span>
+<span class="c1">//int maintenanceRegister(Preferences obj);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printInterval1</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printMemory</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pages.html" class="btn btn-neutral float-left" title="Pages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ernesto Estrada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
