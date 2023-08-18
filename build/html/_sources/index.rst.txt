@@ -32,6 +32,7 @@ Check out the :doc:`usage` section for further information, including how to
    pages
    preferences
    timeESP
+   advertencia
 
 Indices and tables
 ==================
