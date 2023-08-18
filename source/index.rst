@@ -31,6 +31,7 @@ Check out the :doc:`usage` section for further information, including how to
    outputs
    pages
    preferences
+   timeESP
 
 Indices and tables
 ==================

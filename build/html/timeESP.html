@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TimeESP &mdash; AERtronic-Lite-Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AERtronic-Lite-Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.html">Src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionality.html">Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus.html">Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AERtronic-Lite-Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">TimeESP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/timeESP.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="timeesp">
+<h1>TimeESP<a class="headerlink" href="#timeesp" title="Permalink to this heading"></a></h1>
+<section id="source-code-description-time-management-and-information-display">
+<h2>Source Code Description: Time Management and Information Display<a class="headerlink" href="#source-code-description-time-management-and-information-display" title="Permalink to this heading"></a></h2>
+<p>This source code file serves as an interface for managing time-related functions, receiving time and date data, and displaying them on a device. It interfaces with the ESP32Time library to provide real-time clock (RTC) capabilities. The code includes functions to receive time data from an external display, send current time and date to a display, manage operation time of the machine, and reset operation hours.</p>
+</section>
+<section id="source-code-dependencies">
+<h2>Source Code Dependencies<a class="headerlink" href="#source-code-dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>timeESP.hpp</cite>: Header file containing declarations related to time management.</p></li>
+<li><p><cite>Functions.hpp</cite>: Custom header containing function prototypes and necessary dependencies.</p></li>
+<li><p><cite>preferences.hpp</cite>: Header file containing declarations related to preferences management.</p></li>
+</ul>
+</section>
+<section id="global-variables">
+<h2>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>rtc</cite>: An instance of the <cite>ESP32Time</cite> object, which provides access to RTC functions.</p></li>
+<li><p><cite>rtc_current</cite>: An object to store the current time and date.</p></li>
+<li><p><cite>opseg</cite>: An integer variable storing seconds of operation.</p></li>
+<li><p><cite>opmin</cite>: An integer variable storing minutes of operation.</p></li>
+<li><p><cite>ophour</cite>: An integer variable storing hours of operation.</p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>receiveTime()</cite>: Waits for and receives time and date data from an external display (likely a Nextion display). It processes the received data, separates and parses it, and sets the initial time and date of the RTC.</p></li>
+<li><p><cite>currentTime(ESP32Time obj)</cite>: Takes an <cite>ESP32Time</cite> object as input and sends the current time to a display (likely a Nextion display). The function returns a string with the current time, useful for error or warning messages.</p></li>
+<li><p><cite>currentDate(ESP32Time obj)</cite>: Takes an <cite>ESP32Time</cite> object as input and sends the current date to a display (likely a Nextion display). The function returns a string with the current date, useful for error or warning messages.</p></li>
+<li><p><cite>opTime()</cite>: Manages the operation time of the machine. It increments operation seconds, minutes, and hours. It also updates maintenance-related variables and stores them in preference namespaces.</p></li>
+<li><p><cite>resetOp()</cite>: Resets the operation hours by resetting operation seconds, minutes, and hours. It displays a message indicating that the counter has been reset.</p></li>
+<li><p><cite>printopTime()</cite>: Sends the machine’s operation time to a display (likely a Nextion display). The time is presented in hours, minutes, and seconds format.</p></li>
+</ul>
+</section>
+<section id="function-dependencies">
+<h2>Function Dependencies<a class="headerlink" href="#function-dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>timeESP.hpp</cite>: Header file containing necessary declarations related to time management.</p></li>
+<li><p><cite>Functions.hpp</cite>: Custom header containing necessary function prototypes and dependencies.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;timeESP.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Functions.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;preferences.hpp&quot;</span>
+
+<span class="c1">//ESP32Time object to utilize RTC functions:</span>
+<span class="n">ESP32Time</span><span class="w"> </span><span class="n">rtc</span><span class="p">;</span>
+<span class="c1">//Object to store the current time and date</span>
+<span class="n">ESP32Time</span><span class="w"> </span><span class="n">rtc_current</span><span class="p">;</span>
+<span class="c1">//Variables to store seconds, minutes and hours of operation:</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">opseg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">opmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ophour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Function to receive the time and date from the display</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">receiveTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Waits until receives data from Nextion display</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">timeNextion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">timeNextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">timeNextion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">readString</span><span class="p">();</span>
+<span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//Variables to store data from nextion</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">minutes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">days</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//Separates the string data</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">timeNextion</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">timeNextion</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">seconds</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">seconds</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">timeNextion</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">minutes</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">minutes</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">timeNextion</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">hour</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">hour</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">timeNextion</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">days</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">days</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">timeNextion</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">month</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">month</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">timeNextion</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">year</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">year</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">timeNextion</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Sets the initial time and date of the RTC, format(sec,min,hr,day,month,yr):</span>
+<span class="w">    </span><span class="n">rtc</span><span class="p">.</span><span class="n">setTime</span><span class="p">(</span><span class="n">atoi</span><span class="p">(</span><span class="n">seconds</span><span class="p">.</span><span class="n">c_str</span><span class="p">()),</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">minutes</span><span class="p">.</span><span class="n">c_str</span><span class="p">()),</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">hour</span><span class="p">.</span><span class="n">c_str</span><span class="p">()),</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">days</span><span class="p">.</span><span class="n">c_str</span><span class="p">()),</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">month</span><span class="p">.</span><span class="n">c_str</span><span class="p">()),</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">year</span><span class="p">.</span><span class="n">c_str</span><span class="p">()));</span>
+<span class="w">    </span><span class="n">rtc_current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rtc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Function to send the current time to Nextion Display</span>
+<span class="cm"> *</span>
+<span class="cm"> * @return the string with the current time according to RTC</span>
+<span class="cm"> */</span>
+<span class="n">String</span><span class="w"> </span><span class="nf">currentTime</span><span class="p">(</span><span class="n">ESP32Time</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">getSecond</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minutes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">getMinute</span><span class="p">();</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">getAmPm</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">getHour</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//Prints the time to the Nextion display:</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;t0.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">hours</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">minutes</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Updates every second:</span>
+<span class="w">    </span><span class="c1">//delay(1000);</span>
+<span class="w">    </span><span class="c1">//Stores and returns the current time useful when an error or warning occurs:</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nowTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">hours</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">minutes</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">seconds</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nowTime</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Function to send the current date to the Nextion display:</span>
+<span class="cm"> *</span>
+<span class="cm"> * @return the string with current date according to RTC</span>
+<span class="cm"> */</span>
+<span class="n">String</span><span class="w"> </span><span class="nf">currentDate</span><span class="p">(</span><span class="n">ESP32Time</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">getDay</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">getMonth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//+1 bc returns a value between 0-11</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">getYear</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Prints the date to the Nextion display over serial.</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;t1.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">month</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">year</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//Stores and returns the current date useful when an error or warning occurs:</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nowDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">month</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nowDate</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Function to store the operation time of the machine</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">opTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//Adds one every time the main loop runs:</span>
+<span class="w">    </span><span class="n">opseg</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">opseg</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Adds 1 to minute every 60 seconds</span>
+<span class="w">        </span><span class="n">opmin</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Resets seconds</span>
+<span class="w">        </span><span class="n">opseg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">opmin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Adds 1 to hour every 60 minutes:</span>
+<span class="w">        </span><span class="n">ophour</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Adds 1 to the number of operation hours to every key-value</span>
+<span class="w">        </span><span class="n">mhours</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">mmotor</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">lmotor</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">m4hours</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">m8hours</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the number of operation hours in every key-value</span>
+<span class="w">        </span><span class="n">register1</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;maintenance&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">register1</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;reg1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mhours</span><span class="p">);</span>
+<span class="w">        </span><span class="n">register1</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;reg2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mmotor</span><span class="p">);</span>
+<span class="w">        </span><span class="n">register1</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;reg3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lmotor</span><span class="p">);</span>
+<span class="w">        </span><span class="n">register1</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;reg4&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m4hours</span><span class="p">);</span>
+<span class="w">        </span><span class="n">register1</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;reg5&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m8hours</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//resets minutes:</span>
+<span class="w">        </span><span class="n">opmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Resets the operation hours</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">resetOp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">opseg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">opmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ophour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;xstr 320,380,250,35,6,RED,fondo,1,1,3,</span><span class="se">\&quot;</span><span class="s">Contador reiniciado</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Sends the op time to the display</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printopTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Tiempos.topTime.txt=</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">ophour</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;h &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">opmin</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;min &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">opseg</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">endLine</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="header-description-time-management-and-information-display">
+<h2>Header Description: Time Management and Information Display<a class="headerlink" href="#header-description-time-management-and-information-display" title="Permalink to this heading"></a></h2>
+<p>This header file provides the declarations and external references required for managing time-related functions, receiving time and date data, and displaying them on a device. It interfaces with the <cite>ESP32Time</cite> library to utilize the ESP32 real-time clock (RTC) capabilities. The header includes function declarations to send and receive time data, manage operation time of the machine, and reset operation hours.</p>
+</section>
+<section id="header-dependencies">
+<h2>Header Dependencies<a class="headerlink" href="#header-dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>Arduino.h</cite>: Standard header for Arduino platform.</p></li>
+<li><p><cite>ESP32Time.h</cite>: Header file of the <cite>ESP32Time</cite> library, providing access to RTC functions.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>Global Variables<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>rtc</cite>: An external instance of the <cite>ESP32Time</cite> object, serving as the main RTC object for the system.</p></li>
+<li><p><cite>rtc_current</cite>: An external object to store the current time and date.</p></li>
+<li><p><cite>opseg</cite>: An external integer variable storing seconds of operation.</p></li>
+<li><p><cite>opmin</cite>: An external integer variable storing minutes of operation.</p></li>
+<li><p><cite>ophour</cite>: An external integer variable storing hours of operation.</p></li>
+</ul>
+</section>
+<section id="function-declarations">
+<h2>Function Declarations<a class="headerlink" href="#function-declarations" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>String currentTime(ESP32Time obj)</cite>: Takes an <cite>ESP32Time</cite> object as input and returns a string with the current time. This function is responsible for formatting the time data for display purposes.</p></li>
+<li><p><cite>String currentDate(ESP32Time obj)</cite>: Takes an <cite>ESP32Time</cite> object as input and returns a string with the current date. Similar to the <cite>currentTime</cite> function, this function formats the date data for display.</p></li>
+<li><p><cite>void receiveTime()</cite>: Receives time and date data from an external source (e.g., a Nextion display). This function processes and sets the initial time and date of the RTC based on the received data.</p></li>
+<li><p><cite>void opTime()</cite>: Manages the operation time of the machine. It increments operation seconds, minutes, and hours and updates the related global variables accordingly.</p></li>
+<li><p><cite>void printopTime()</cite>: Sends the machine’s operation time to a display (likely a Nextion display). This function formats and presents the operation time in hours, minutes, and seconds.</p></li>
+<li><p><cite>void resetOp()</cite>: Resets the operation hours of the machine. It sets the operation seconds, minutes, and hours to zero and can display a message indicating the reset.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>Function Dependencies<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>ESP32Time.h</cite>: Header file of the <cite>ESP32Time</cite> library, required for accessing RTC functions and objects.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+<span class="c1">//Including the time library to use the ESP32 rtc and declare a ESP32Time object:</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ESP32Time.h&gt;</span>
+<span class="c1">//Main rtc object</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">ESP32Time</span><span class="w"> </span><span class="n">rtc</span><span class="p">;</span>
+<span class="c1">//Object to store the current time and date</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">ESP32Time</span><span class="w"> </span><span class="n">rtc_current</span><span class="p">;</span>
+<span class="c1">//Variables to store seconds, minutes and hours of operation:</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">opseg</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">opmin</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ophour</span><span class="p">;</span>
+
+<span class="c1">//Functions declarations:</span>
+<span class="n">String</span><span class="w"> </span><span class="nf">currentTime</span><span class="p">(</span><span class="n">ESP32Time</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="nf">currentDate</span><span class="p">(</span><span class="n">ESP32Time</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">receiveTime</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">opTime</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printopTime</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">resetOp</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ernesto Estrada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
