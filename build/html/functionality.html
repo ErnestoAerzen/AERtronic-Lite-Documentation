@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functionality &mdash; AERtronic-Lite-Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="main" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AERtronic-Lite-Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.html">src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">main</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Functionality</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enum-and-function-declarations-for-page-management-and-data-handling">Enum and Function Declarations for Page Management and Data Handling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AERtronic-Lite-Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Functionality</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/functionality.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="functionality">
+<h1>Functionality<a class="headerlink" href="#functionality" title="Permalink to this heading"></a></h1>
+<p>This section outlines the data transmission and handling functions within the AERtronic Basic sketch. The functions are encapsulated in the file <cite>Functionality.hpp</cite> and play a vital role in processing data received from the Nextion display, triggering relevant actions, and managing system status.</p>
+<p><strong>Code Overview:</strong></p>
+<p>The <cite>Functionality.hpp</cite> file encompasses the following significant functionalities:</p>
+<ol class="arabic simple">
+<li><p><strong>Data Transmission Handling (`sendData()`):</strong></p></li>
+</ol>
+<p>The <cite>sendData(int data_nextion)</cite> function interprets incoming data from the Nextion display, directing the program’s behavior accordingly. The function’s conditional statements are responsible for:
+- Updating the current display page based on the received data.
+- Enabling or disabling digital inputs and outputs according to specific conditions.
+- Managing Modbus functionality by activating or deactivating it based on input.
+- Confirming maintenance and incrementing the maintenance count.
+- Handling resets for errors and warnings, maintaining a clean state.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Page and Status Management:</strong></p></li>
+</ol>
+<p>The function distinguishes between various display pages and uses the <cite>currentPage</cite> variable to keep track of the active page. It manages start and stop statuses of the system, enabling coordinated control.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Error and Warning Handling:</strong></p></li>
+</ol>
+<p>For detected errors and warnings, the function captures the corresponding time and date, storing them in designated global variables. It also updates the system’s status, indicating error or warning conditions. Events for errors and warnings are recorded with timestamps for future reference.</p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Status Box Matrix:</strong></p></li>
+</ol>
+<p>The <cite>boxMatrix</cite> array stores error and warning codes, mapping them to specific display positions for real-time visualization. This matrix ensures efficient tracking of error and warning occurrences.</p>
+<p>This section provides an overview of the critical functions responsible for processing incoming data from the Nextion display, executing relevant actions, and maintaining system status within the AERtronic Basic sketch. For comprehensive insights into each function’s inner workings and code segments, proceed to the subsequent sections for detailed explanations.</p>
+<p>As always, consider that the formatting and presentation may be best appreciated in a reStructuredText viewer or editor that supports proper rendering.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Functionality.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Functions.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;timeESP.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;preferences.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Inputs.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Outputs.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ModbusESP32.hpp&quot;</span>
+
+<span class="c1">//Declaration of a Pages type variable</span>
+<span class="n">Pages</span><span class="w"> </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NOPAGE</span><span class="p">;</span>
+
+<span class="c1">//Global strings to save the time and date when an error occurs:</span>
+<span class="n">String</span><span class="w"> </span><span class="n">timeErrorh0</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">dateErrorh0</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">timeErrorh1</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">dateErrorh1</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">timeErrorh2</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">dateErrorh2</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">timeErrorh3</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">dateErrorh3</span><span class="p">;</span>
+<span class="c1">//Global strings to save the time and date when a warning appears:</span>
+<span class="n">String</span><span class="w"> </span><span class="n">timeWarningh0</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">dateWarningh0</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">timeWarningh1</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">dateWarningh1</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">timeWarningh2</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">dateWarningh2</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">timeWarningh3</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">dateWarningh3</span><span class="p">;</span>
+<span class="c1">//Array to store the error an warning</span>
+<span class="n">String</span><span class="w"> </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;null&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">};</span>
+
+
+<span class="cm">/**</span>
+<span class="cm">* @brief Stores functionality for sending to the Nextion display according to what is received over serial</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">data_nextion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">//If else statements to update the page to display</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Home page is int 4</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOME</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Presion page is int 12</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PRESSURE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">13</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Temperatura page is int 13</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEMP</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Intervalos page is int 8</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INTERVALOS</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Tiempos page is int 9</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PAGETIMES</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Mensajes page is int 25</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEN</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">26</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Eventos1 page is int 26</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EVENTS</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">34</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//ResetEv page is int 34</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RESET_EV</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">35</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Resetmant page is int 35</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RESET_MANT</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Advertencia page is int 36</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADVERTENCIA</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//EstadoModulo page is int 7</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ESTADO</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">39</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Menoria page is int 39</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MEMORY</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Eventos2 page is int 27</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EVENTS2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">28</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Eventos3 page is int 28</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EVENTS3</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">29</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Eventos4 page is int 29</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EVENTS4</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Eventos5 page is int 30</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EVENTS5</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">31</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Eventos6 page is int 31</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EVENTS6</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Eventos7 page is int 32</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EVENTS7</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Comunicacion page is int 24</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MODBUS</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//ConfirmarM page is int 40</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIRM</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">254</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NOPAGE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Enables and disables digital inputs and outputs</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">240</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">start_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HIGH</span><span class="p">;</span>
+<span class="w">        </span><span class="n">stop_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LOW</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">241</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">start_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LOW</span><span class="p">;</span>
+<span class="w">        </span><span class="n">stop_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HIGH</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">242</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">start_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LOW</span><span class="p">;</span>
+<span class="w">        </span><span class="n">stop_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LOW</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Additional functionality &quot;ResetContador&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">243</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">resetOp</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Modbus functionality</span>
+<span class="w">    </span><span class="c1">//Modbus on</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">244</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">setUpModbus</span><span class="p">();</span>
+<span class="w">        </span><span class="n">modbusStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Sends a message to the nextion display</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;fill 200,300,250,35,65535&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;xstr 200,300,250,35,6,RED,65535,1,1,3,</span><span class="se">\&quot;</span><span class="s">Modbus On</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">245</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Modbus off</span>
+<span class="w">        </span><span class="n">modbusStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Sends a message to the nextion display</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;fill 700,455,100,25,65535&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;fill 200,300,250,35,65535&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;xstr 200,300,250,35,6,RED,65535,1,1,3,</span><span class="se">\&quot;</span><span class="s">Modbus Off</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Serial2</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Confirm maintenance</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">239</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">numberOfMaintenance</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Space in memory to store the maintenance registers:</span>
+<span class="w">        </span><span class="n">register1</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;maintenance&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Key to store the number of maintenances:</span>
+<span class="w">        </span><span class="n">register1</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;numOfMt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numberOfMaintenance</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//Add a reset for the number of maintenance hours!!</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Reset errors and warnings</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">238</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Saves the time and date when an error occurs in h0 slide bar(Nextion): &quot;ErrorH0&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">246</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Saves the returned strings to the corresponding global variables:</span>
+<span class="w">        </span><span class="n">timeErrorh0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dateErrorh0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Updates the status of the system</span>
+<span class="w">        </span><span class="n">statusDigital</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the system event:</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putString</span><span class="p">(</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">contador</span><span class="p">),</span><span class="w"> </span><span class="n">dateErrorh0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeErrorh0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 7&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Stores the number of total system events</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contador</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Stores the error in its corresponding place according to the time it appeared:</span>
+<span class="w">        </span><span class="c1">//Update first empty boxMatrix with &quot;EH0&quot;</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EH0&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">//An error in the h0 slidebar corresponds to 7 and sends it to the page Mensajes.box(i + 1)(Nextion):</span>
+<span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=7&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Saves the time and date when a warning occurs in h0 slide bar(Nextion): &quot;WarningH0&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">247</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Saves the returned strings to the corresponding global variables:</span>
+<span class="w">        </span><span class="n">timeWarningh0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dateWarningh0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Updates the status of the system</span>
+<span class="w">        </span><span class="n">statusDigital</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the system event:</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putString</span><span class="p">(</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">contador</span><span class="p">),</span><span class="w"> </span><span class="n">dateWarningh0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeWarningh0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 8&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Stores the number of total system events</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contador</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Stores the warning in its corresponding place according to the time it appeared:</span>
+<span class="w">        </span><span class="c1">//Update first empty boxMatrix with &quot;WH0&quot;</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WH0&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">//A warning in the h0 slidebar corresponds to 8 and sends it to the page Mensajes.box(i + 1)(Nextion):</span>
+<span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=8&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Saves the time and date when an error occurs in h1 slide bar(Nextion): &quot;ErrorH1&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">248</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Saves the returned strings to the corresponding global variables:</span>
+<span class="w">        </span><span class="n">timeErrorh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dateErrorh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Updates the status of the system</span>
+<span class="w">        </span><span class="n">statusDigital</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the system event:</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putString</span><span class="p">(</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">contador</span><span class="p">),</span><span class="w"> </span><span class="n">dateErrorh1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeErrorh1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 1&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Stores the number of total system events</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contador</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Stores the error in its corresponding place according to the time it appeared:</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EH1&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">//An error in the h1 slidebar corresponds to 1 and sends it to the page Mensajes.box(i + 1)(Nextion):</span>
+<span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=1&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//Saves the time and date when a warning occurs in h1 slide bar(Nextion): &quot;WarningH1&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">249</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Saves the returned strings to the corresponding global variables:</span>
+<span class="w">        </span><span class="n">timeWarningh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dateWarningh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Updates the status of the system</span>
+<span class="w">        </span><span class="n">statusDigital</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the system event:</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putString</span><span class="p">(</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">contador</span><span class="p">),</span><span class="w"> </span><span class="n">dateWarningh1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeWarningh1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 2&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Stores the number of total system events</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contador</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Stores the warning in its corresponding place according to the time it appeared:</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WH1&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">//A warning in the h1 slidebar corresponds to 2 and sends it to the page Mensajes.box(i + 1)(Nextion):</span>
+<span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=2&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Saves the time and date when an error occurs in the h2 slide bar(Nextion): &quot;ErrorH2&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">250</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Saves the returned strings to the corresponding global variables:</span>
+<span class="w">        </span><span class="n">timeErrorh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dateErrorh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Updates the status of the system</span>
+<span class="w">        </span><span class="n">statusDigital</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the system event:</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putString</span><span class="p">(</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">contador</span><span class="p">),</span><span class="w"> </span><span class="n">dateErrorh2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeErrorh2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 3&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Stores the number of total system events</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contador</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Stores the error in its corresponding place according to the time it appeared:</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EH2&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">//An error in the h2 slidebar corresponds to 3 and sends it to the page Mensajes.box(i + 1)(Nextion):</span>
+<span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=3&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Saves the time and date when a warning occurs in h2 slide bar(Nextion): &quot;WarningH2&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">251</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Saves the returned strings to the corresponding global variables:</span>
+<span class="w">        </span><span class="n">timeWarningh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dateWarningh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Updates the status of the system</span>
+<span class="w">        </span><span class="n">statusDigital</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the system event:</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putString</span><span class="p">(</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">contador</span><span class="p">),</span><span class="w"> </span><span class="n">dateWarningh2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeWarningh2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 4&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Stores the number of total system events</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contador</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Stores the warning in its corresponding place according to the time it appeared:</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WH2&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">//A warning in the h2 slidebar corresponds to 4 and sends it to the page Mensajes.box(i + 1)(Nextion):</span>
+<span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=4&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Saves the time and date when an error occurs in the h3 slide bar(Nextion): &quot;ErrorH3&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">252</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Saves the returned strings to the corresponding global variables:</span>
+<span class="w">        </span><span class="n">timeErrorh3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dateErrorh3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Updates the status of the system</span>
+<span class="w">        </span><span class="n">statusDigital</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the system event:</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putString</span><span class="p">(</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">contador</span><span class="p">),</span><span class="w"> </span><span class="n">dateErrorh3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeErrorh3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 5&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Stores the number of total system events</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contador</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Stores the error in its corresponding place according to the time it appeared:</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;EH3&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">//An error in the h3 slidebar corresponds to 5 and sends it to the page Mensajes.box(i + 1)(Nextion):</span>
+<span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=5&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Saves the time and date when a warning occurs in h3 slide bar(Nextion): &quot;WarningH3&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">data_nextion</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">253</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//Saves the returned strings to the corresponding global variables:</span>
+<span class="w">        </span><span class="n">timeWarningh3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentTime</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dateWarningh3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="p">(</span><span class="n">rtc</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Updates the status of the system</span>
+<span class="w">        </span><span class="n">statusDigital</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//Saves the system event:</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;eventos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putString</span><span class="p">(</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">contador</span><span class="p">),</span><span class="w"> </span><span class="n">dateWarningh3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeWarningh3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; 6&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Stores the number of total system events</span>
+<span class="w">        </span><span class="n">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">putInt</span><span class="p">(</span><span class="s">&quot;contador&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contador</span><span class="p">);</span>
+<span class="w">        </span><span class="n">events</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//Stores the warning in its corresponding place according to the time it appeared:</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="p">){</span>
+<span class="w">                </span><span class="n">boxMatrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;WH3&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="c1">//A warning in the h3 slidebar corresponds to 6 and sends it to the page Mensajes.box(i + 1)(Nextion):</span>
+<span class="w">                </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=6&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">endLine</span><span class="p">();</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="enum-and-function-declarations-for-page-management-and-data-handling">
+<h2>Enum and Function Declarations for Page Management and Data Handling<a class="headerlink" href="#enum-and-function-declarations-for-page-management-and-data-handling" title="Permalink to this heading"></a></h2>
+<p>This section introduces the <cite>.hpp</cite> file named <cite>Functionality.hpp</cite>, which encapsulates key enumerations and function declarations that manage page navigation, error and warning handling, and data transmission within the AERtronic Basic sketch.</p>
+<p><strong>Code Overview:</strong></p>
+<p>The <cite>Functionality.hpp</cite> file includes the following significant components:</p>
+<ol class="arabic simple">
+<li><p><strong>Nextion Page Enumeration (`PAGES_H`):</strong></p></li>
+</ol>
+<p>An enumeration named <cite>Pages</cite> defines symbolic constants representing various pages in the Nextion display interface. This enumeration serves as an organized way to manage and identify different display pages.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Global Variables:</strong></p></li>
+</ol>
+<p>Global variables are declared to store essential data, including time and date information associated with errors and warnings, as well as a matrix for tracking error and warning occurrences. The variable <cite>currentPage</cite> of the <cite>Pages</cite> type tracks the current active page.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Function Declarations:</strong></p></li>
+</ol>
+<p>The file includes function declarations for the functions:
+- <cite>sendData(int data_nextion)</cite>: Handles data received from the Nextion display, executing actions based on the input.
+- <cite>page24()</cite>: Specific functionality associated with the page numbered 24.</p>
+<p>These declarations provide an interface for these functions and describe their intended purpose within the sketch.</p>
+<p>This section offers a concise overview of the enumerated page options, global variables for error, warning, and page tracking, and the essential function declarations present within the <cite>Functionality.hpp</cite> file. For a comprehensive understanding of each enumerated value and function’s role, including their code implementations, proceed to the subsequent sections for detailed explanations.</p>
+<p>As always, consider that the formatting and presentation may be best appreciated in a reStructuredText viewer or editor that supports proper rendering.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+
+<span class="c1">//Enum to store the name of the Nextion pages</span>
+<span class="cp">#ifndef PAGES_H</span>
+<span class="cp">#define PAGES_H</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="nc">Pages</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">HOME</span><span class="p">,</span>
+<span class="w">    </span><span class="n">MEN</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PAGETIMES</span><span class="p">,</span>
+<span class="w">    </span><span class="n">INTERVALOS</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EVENTS</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EVENTS2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EVENTS3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EVENTS4</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EVENTS5</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EVENTS6</span><span class="p">,</span>
+<span class="w">    </span><span class="n">EVENTS7</span><span class="p">,</span>
+<span class="w">    </span><span class="n">RESET_EV</span><span class="p">,</span>
+<span class="w">    </span><span class="n">RESET_MANT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ADVERTENCIA</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ESTADO</span><span class="p">,</span>
+<span class="w">    </span><span class="n">MEMORY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">MODBUS</span><span class="p">,</span>
+<span class="w">    </span><span class="n">NOPAGE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PRESSURE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">TEMP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">CONFIRM</span>
+<span class="p">};</span>
+<span class="cp">#endif </span><span class="c1">// PAGES_H</span>
+<span class="c1">//Variable to store the current page of the enum options</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">Pages</span><span class="w"> </span><span class="n">currentPage</span><span class="p">;</span>
+<span class="c1">//Global strings to save the time and date when an error occurs:</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">timeErrorh0</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateErrorh0</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">timeErrorh1</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateErrorh1</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">timeErrorh2</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateErrorh2</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">timeErrorh3</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateErrorh3</span><span class="p">;</span>
+<span class="c1">//Global strings to save the time and date when a warning appears:</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">timeWarningh0</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateWarningh0</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">timeWarningh1</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateWarningh1</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">timeWarningh2</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateWarningh2</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">timeWarningh3</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dateWarningh3</span><span class="p">;</span>
+<span class="c1">//Array to store the error an warning</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">boxMatrix</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+<span class="c1">//Counter to store the number of system events</span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="p">;</span>
+<span class="c1">//Function declarations:</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">data_nextion</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">page24</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="main.html" class="btn btn-neutral float-left" title="main" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ernesto Estrada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

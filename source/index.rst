@@ -24,6 +24,7 @@ Check out the :doc:`usage` section for further information, including how to
    tech
    src
    main
+   functionality
 
 Indices and tables
 ==================
