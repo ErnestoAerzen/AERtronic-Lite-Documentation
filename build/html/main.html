@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>main &mdash; AERtronic-Lite-Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AERtronic-Lite-Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.html">src</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AERtronic-Lite-Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">main</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/main.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="main">
+<h1>main<a class="headerlink" href="#main" title="Permalink to this heading"></a></h1>
+<section id="main-program-logic-for-mcu-nextion-command-communication">
+<h2>Main Program Logic for MCU-Nextion Command Communication<a class="headerlink" href="#main-program-logic-for-mcu-nextion-command-communication" title="Permalink to this heading"></a></h2>
+<p>This section presents the core logic of the AERtronic Basic sketch (<cite>src.ino</cite>), which is responsible for establishing communication and interaction between an ESP32 microcontroller unit (MCU) and a Nextion display. The code orchestrates various functions to manage inputs, outputs, time synchronization, page-specific operations, and more.</p>
+<p><strong>Code Overview:</strong></p>
+<p>The main program is split into the <cite>mainSetup()</cite> and <cite>mainLoop()</cite> functions, each serving distinct purposes during the execution of the sketch.</p>
+</section>
+<section id="mainsetup">
+<h2><cite>mainSetup()</cite><a class="headerlink" href="#mainsetup" title="Permalink to this heading"></a></h2>
+<p>The <cite>mainSetup()</cite> function initializes essential components and prepares the system for operation. The following steps are performed:</p>
+<ul class="simple">
+<li><p>Serial communication is established at a baud rate of 115200.</p></li>
+<li><p>Digital inputs and outputs are configured using <cite>inputsFunc()</cite> and <cite>outputFunc()</cite> functions, respectively.</p></li>
+<li><p>Time and date synchronization with the Nextion display is awaited through <cite>receiveTime()</cite> function.</p></li>
+<li><p>The necessary namespaces for boot counting, preferences, registers, and events are initialized.</p></li>
+<li><p>A delay of 500 milliseconds is included to ensure stability.</p></li>
+</ul>
+</section>
+<section id="mainloop">
+<h2><cite>mainLoop()</cite><a class="headerlink" href="#mainloop" title="Permalink to this heading"></a></h2>
+<p>The <cite>mainLoop()</cite> function is responsible for the ongoing operation of the sketch. It performs the following tasks in a cyclic manner:</p>
+<ul class="simple">
+<li><p>Executes common functions for all pages, such as reading serial data, updating internal time, and reading analog sensor values.</p></li>
+<li><p>Depending on the current page displayed on the Nextion display, specific operations are performed:
+- Analog values are read and printed for home, pressure, and temperature pages.
+- Current time and date are displayed for various pages.
+- Page-specific functions are called, like handling messages, sending time data, displaying maintenance intervals, and managing events.
+- Input and output status is monitored on the ESTADO (state) page.
+- Modbus data is sent on the MODBUS page if modbusStatus is true.
+- Maintenance messages are displayed if maintenance hours exceed a certain threshold.</p></li>
+<li><p>The loop continues to run at a one-second interval using a delay of 1000 milliseconds.</p></li>
+</ul>
+<p>Additionally, specific conditions trigger actions such as returning to the home page in the event of warnings or errors, sending Modbus data if enabled, and displaying maintenance messages.</p>
+<p>This section provides an overview of the core functionality of the AERtronic Basic sketch. For more detailed explanations of individual functions, specific page operations, and code segments, refer to subsequent sections.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ernesto Estrada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
