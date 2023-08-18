@@ -1,6 +1,9 @@
 Functionality
 ========================================
 
+Functionality Program Logic
+---------------------------
+
 This section outlines the data transmission and handling functions within the AERtronic Basic sketch. The functions are encapsulated in the file `Functionality.hpp` and play a vital role in processing data received from the Nextion display, triggering relevant actions, and managing system status.
 
 **Code Overview:**
