@@ -28,6 +28,7 @@ Check out the :doc:`usage` section for further information, including how to
    functions
    inputs
    modbus
+   outputs
 
 Indices and tables
 ==================
