@@ -1,4 +1,4 @@
-main
+Main
 ====
 
 Main Program Logic for MCU-Nextion Command Communication

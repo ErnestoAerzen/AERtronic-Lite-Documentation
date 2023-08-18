@@ -1,4 +1,4 @@
-src
+Src
 =====
 
 The AERtronic Basic sketch, named `src.ino`, serves as a program facilitating the exchange of commands between an ESP32 microcontroller unit (MCU) and a Nextion display. The code acts as a bridge, enabling communication between these two components, allowing seamless interaction and control.
