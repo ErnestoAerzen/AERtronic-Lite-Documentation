@@ -34,6 +34,7 @@ Check out the :doc:`usage` section for further information, including how to
    timeESP
    advertencia
    colors
+   comunicacion
 
 Indices and tables
 ==================
