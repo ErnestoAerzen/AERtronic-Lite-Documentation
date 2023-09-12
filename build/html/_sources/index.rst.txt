@@ -39,6 +39,13 @@ Check out the :doc:`usage` section for further information, including how to
    contador
    controlsystem
    estadomodulo
+   eventos1
+   eventos2
+   eventos3
+   eventos4
+   eventos5
+   eventos6
+   eventos7
 
 Indices and tables
 ==================
