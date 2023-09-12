@@ -49,6 +49,7 @@ Preinitialize event ColorS
 --------------------------
 
 .. code-block:: javascript
+
     // Changes the page's background color
     ColorS.bco=fondo
 
@@ -56,6 +57,7 @@ Postinitialize event ColorS
 ---------------------------
 
 .. code-block:: javascript
+
     //Nav Drawer start
     cirs 30,30,20,color
     cirs 80,30,20,color
@@ -233,6 +235,7 @@ Touch press event m0
 --------------------
 
 .. code-block:: javascript
+
     //Changes the theme color
     fondo=65534
     //Changes the main color
@@ -243,6 +246,7 @@ Touch press event m1
 --------------------
 
 .. code-block:: javascript
+
     //Changes the theme color
     fondo=63391
     //Changes the main color
@@ -253,6 +257,7 @@ Touch press event m2
 --------------------
 
 .. code-block:: javascript
+
     //Changes the theme color
     fondo=65438
     //Changes the main color
@@ -263,6 +268,7 @@ Touch press event m3
 --------------------
 
 .. code-block:: javascript
+
     //Changes the theme color
     fondo=63421
     //Changes the main color
@@ -273,6 +279,7 @@ Touch press event m4
 --------------------
 
 .. code-block:: javascript
+
     //Changes the theme color
     fondo=6339
     //Changes the main color
@@ -283,6 +290,7 @@ Touch press event m5
 --------------------
 
 .. code-block:: javascript
+
     //Changes the theme color
     fondo=8484
     //Changes the main color
@@ -293,6 +301,7 @@ Touch press event bInfoCol
 --------------------------
 
 .. code-block:: javascript
+
     //changes the images according the theme selected
     if(fondo==65534)
     {
@@ -320,6 +329,7 @@ Touch release event bInfoCol
 ----------------------------
 
 .. code-block:: javascript
+
     //restores the images according the theme selected
     if(fondo==65534)
     {
@@ -347,6 +357,7 @@ Touch press event bHomeCol
 --------------------------
 
 .. code-block:: javascript
+
     //Changes the image according the theme selected
     if(fondo==65534)
     {
@@ -372,6 +383,7 @@ Touch release event bHomeCol
 ----------------------------
 
 .. code-block:: javascript
+
     //Restores the image according the theme selected
     if(fondo==65534)
     {
@@ -399,6 +411,7 @@ Touch press event bBackCol
 --------------------------
 
 .. code-block:: javascript
+
     //Changes the image according the theme selected
     if(fondo==65534)
     {
@@ -424,6 +437,7 @@ Touch release event bBackCol
 ----------------------------
 
 .. code-block:: javascript
+    
     //Restores the image according the theme selected
     if(fondo==65534)
     {
