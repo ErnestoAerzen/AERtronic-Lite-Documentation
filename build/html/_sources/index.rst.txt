@@ -35,6 +35,7 @@ Check out the :doc:`usage` section for further information, including how to
    advertencia
    colors
    comunicacion
+   confirmarm
 
 Indices and tables
 ==================
