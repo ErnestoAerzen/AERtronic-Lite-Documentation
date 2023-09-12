@@ -46,6 +46,7 @@ Check out the :doc:`usage` section for further information, including how to
    eventos5
    eventos6
    eventos7
+   fecha
 
 Indices and tables
 ==================
