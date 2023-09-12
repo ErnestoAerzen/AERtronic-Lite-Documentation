@@ -33,6 +33,7 @@ Check out the :doc:`usage` section for further information, including how to
    preferences
    timeESP
    advertencia
+   colors
 
 Indices and tables
 ==================

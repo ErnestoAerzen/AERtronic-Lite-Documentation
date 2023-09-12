@@ -17,7 +17,7 @@ Page Title
 ----------
 
 Here, a title bar is constructed at the top of the screen, enhancing the overall visual design of the interface.
-
+ 
 Buttons
 -------
 

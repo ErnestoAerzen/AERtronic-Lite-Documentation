@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ColorS Nextion Page &mdash; AERtronic-Lite-Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AERtronic-Lite-Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.html">Src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionality.html">Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus.html">Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeESP.html">TimeESP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advertencia.html">Advertencia Nextion page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AERtronic-Lite-Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ColorS Nextion Page</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/colors.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="colors-nextion-page">
+<h1>ColorS Nextion Page<a class="headerlink" href="#colors-nextion-page" title="Permalink to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
+<p>This script is designed for use with a Nextion display, a versatile touch-enabled graphical user interface commonly used in embedded projects. The script defines the layout and functionality of the display, including buttons, navigation elements, icons, and text, to create an interactive user interface.</p>
+</section>
+<section id="navigation-drawer">
+<h2>Navigation Drawer<a class="headerlink" href="#navigation-drawer" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>The script starts by defining a navigation drawer, which typically contains circular buttons for menu navigation. It uses the <cite>cirs</cite> command to draw circular buttons at specific coordinates with defined colors.</p></li>
+<li><p>Lines are drawn to connect these circular buttons, creating a visual separation.</p></li>
+<li><p>Rectangles are filled to create the background of the navigation drawer, giving it a distinct appearance.</p></li>
+</ul>
+<section id="navigation-drawer-icons">
+<h3>Navigation Drawer Icons<a class="headerlink" href="#navigation-drawer-icons" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Based on the background color (<cite>fondo</cite>) selected, the script determines the theme and sets the font color accordingly.</p></li>
+<li><p>Each theme corresponds to a set of icons (represented by the <cite>pic</cite> command) placed at specific coordinates within the navigation drawer. These icons are displayed based on the selected theme.</p></li>
+</ul>
+</section>
+</section>
+<section id="page-title">
+<h2>Page Title<a class="headerlink" href="#page-title" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>The script defines circular buttons for the page title, similar to those in the navigation drawer.</p></li>
+<li><p>Lines are drawn to connect these buttons, creating a visually cohesive title area.</p></li>
+<li><p>A rectangle is filled to serve as the background of the page title.</p></li>
+</ul>
+<section id="buttons">
+<h3>Buttons<a class="headerlink" href="#buttons" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The script defines several buttons, each consisting of circular shapes.</p></li>
+<li><p>These buttons are drawn using the <cite>cirs</cite> command with different coordinates and colors.</p></li>
+<li><p>Lines are drawn to connect and delineate the buttons.</p></li>
+<li><p>Fill commands are used to color specific portions of the buttons, creating the appearance of distinct button areas.</p></li>
+</ul>
+</section>
+<section id="page-text">
+<h3>Page Text<a class="headerlink" href="#page-text" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Depending on the system language setting (<cite>sys0</cite>), the script displays text relevant to the selected language.</p></li>
+<li><p>Multiple language options are provided, and the appropriate text is displayed based on the language setting.</p></li>
+</ul>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading"></a></h2>
+<p>This script is an essential component of the Nextion display project, defining the visual elements and interactivity of the user interface. It allows users to navigate through menus, select themes, and interact with buttons while accommodating multiple languages. This script can be customized and expanded upon to suit the specific requirements of your project.</p>
+</section>
+<section id="preinitialize-event-colors">
+<h2>Preinitialize event ColorS<a class="headerlink" href="#preinitialize-event-colors" title="Permalink to this heading"></a></h2>
+</section>
+<section id="postinitialize-event-colors">
+<h2>Postinitialize event ColorS<a class="headerlink" href="#postinitialize-event-colors" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-m0">
+<h2>Touch press event m0<a class="headerlink" href="#touch-press-event-m0" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-m1">
+<h2>Touch press event m1<a class="headerlink" href="#touch-press-event-m1" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-m2">
+<h2>Touch press event m2<a class="headerlink" href="#touch-press-event-m2" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-m3">
+<h2>Touch press event m3<a class="headerlink" href="#touch-press-event-m3" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-m4">
+<h2>Touch press event m4<a class="headerlink" href="#touch-press-event-m4" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-m5">
+<h2>Touch press event m5<a class="headerlink" href="#touch-press-event-m5" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-binfocol">
+<h2>Touch press event bInfoCol<a class="headerlink" href="#touch-press-event-binfocol" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-release-event-binfocol">
+<h2>Touch release event bInfoCol<a class="headerlink" href="#touch-release-event-binfocol" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-bhomecol">
+<h2>Touch press event bHomeCol<a class="headerlink" href="#touch-press-event-bhomecol" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-release-event-bhomecol">
+<h2>Touch release event bHomeCol<a class="headerlink" href="#touch-release-event-bhomecol" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-press-event-bbackcol">
+<h2>Touch press event bBackCol<a class="headerlink" href="#touch-press-event-bbackcol" title="Permalink to this heading"></a></h2>
+</section>
+<section id="touch-release-event-bbackcol">
+<h2>Touch release event bBackCol<a class="headerlink" href="#touch-release-event-bbackcol" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ernesto Estrada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
