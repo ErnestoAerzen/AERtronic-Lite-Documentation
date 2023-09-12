@@ -37,6 +37,8 @@ Check out the :doc:`usage` section for further information, including how to
    comunicacion
    confirmarm
    contador
+   controlsystem
+   estadomodulo
 
 Indices and tables
 ==================
