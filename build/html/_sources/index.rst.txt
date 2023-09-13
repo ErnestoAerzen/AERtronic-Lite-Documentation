@@ -48,6 +48,9 @@ Check out the :doc:`usage` section for further information, including how to
    eventos7
    fecha
    home
+   hora
+   idiomas
+   insesion
 
 Indices and tables
 ==================
