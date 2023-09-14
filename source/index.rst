@@ -61,6 +61,11 @@ Check out the :doc:`usage` section for further information, including how to
    machineparam
    memoria
    mensajes
+   menu
+   menuconf
+   pconfig
+   pantalla
+   popup
 
 Indices and tables
 ==================

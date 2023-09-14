@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pantalla Nextion Page &mdash; AERtronic-Lite-Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Popup Nextion Page" href="popup.html" />
+    <link rel="prev" title="PConfig Nextion Page" href="pconfig.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AERtronic-Lite-Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.html">Src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionality.html">Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus.html">Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeESP.html">TimeESP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advertencia.html">Advertencia Nextion page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">ColorS Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comunicacion.html">Comunicacion Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confirmarm.html">ConfirmarM Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contador.html">Contador Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlsystem.html">ControlSystem Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estadomodulo.html">EstadoModulo System Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos1.html">Eventos1 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos2.html">Eventos2 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos3.html">Eventos3 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos4.html">Eventos4 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos5.html">Eventos5 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos6.html">Eventos6 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos7.html">Eventos7 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fecha.html">Fecha Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="home.html">Fecha Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hora.html">Hora Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="idiomas.html">Idiomas Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="insesion.html">InSesion Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html">Info Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inicio.html">Inicio Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intervalos.html">Intervalos Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limites.html">Limites Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limites2.html">Limites2 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limites3.html">Limites3 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limites4.html">Limites4 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machineparam.html">MachineParam Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="memoria.html">Memoria Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mensajes.html">Mensajes Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mensajes.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mensajes.html#script-overview">Script Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">Menu Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menuconf.html">MenuConf Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pconfig.html">PConfig Nextion Page</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pantalla Nextion Page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-overview">Script Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-explanation">Script Explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preinitialize-event-pantalla">Preinitialize event Pantalla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#postinitialize-event-pantalla">Postinitialize event Pantalla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-m0">Touch press event m0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-m0">Touch release event m0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-m1">Touch press event m1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-m1">Touch release event m1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-m2">Touch press event m2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-m2">Touch release event m2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-m3">Touch press event m3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-m3">Touch release event m3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-m4">Touch press event m4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-m4">Touch release event m4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-binfopa">Touch press event bInfoPa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-binfopa">Touch release event bInfoPa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-bhomepa">Touch press event bHomePa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-bhomepa">Touch release event bHomePa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-bbackpa">Touch press event bBackPa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-bbackpa">Touch release event bBackPa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="popup.html">Popup Nextion Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AERtronic-Lite-Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Pantalla Nextion Page</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pantalla.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pantalla-nextion-page">
+<h1>Pantalla Nextion Page<a class="headerlink" href="#pantalla-nextion-page" title="Permalink to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>This document provides a detailed explanation of a Nextion display script used to create a user interface with a navigation drawer, menu buttons, page title, and associated elements. The script allows for customization of colors, icons, and text based on user preferences.</p>
+</section>
+<section id="script-overview">
+<h2>Script Overview<a class="headerlink" href="#script-overview" title="Permalink to this heading"></a></h2>
+<p>The script consists of the following sections:</p>
+<ol class="arabic simple">
+<li><p><strong>Custom Color (cbutton.val=color)</strong>
+- This command sets the value of <cite>cbutton.val</cite> to the specified color.</p></li>
+<li><p><strong>Navigation Drawer (Nav Drawer)</strong>
+- The navigation drawer is created with four circular buttons (cirs), lines (line) forming a rectangular border, and filled rectangles (fill) for background.</p></li>
+<li><p><strong>Menu Buttons</strong>
+- Five sets of menu buttons are defined, each consisting of two circular buttons, lines connecting them, and filled rectangles for background. Button properties, such as color, are determined by <cite>cbutton.val</cite>.</p></li>
+<li><p><strong>Page Title</strong>
+- The page title is created using two circular buttons, connecting lines, and a filled rectangle for background.</p></li>
+<li><p><strong>Navigation Drawer Icons</strong>
+- Icons within the navigation drawer change based on the value of <cite>fondo</cite> (background color).
+- Each theme (Theme 1 to Theme 6) defines different icon arrangements based on the background color.
+- Additional icons are defined for menu buttons corresponding to each theme.</p></li>
+<li><p><strong>Page Text</strong>
+- Text elements (xstr) are used to display menu item names.
+- Text content varies depending on the selected language (Spanish, Italian, French, English, German, Portuguese) specified by the <cite>sys0</cite> variable.</p></li>
+</ol>
+</section>
+<section id="script-explanation">
+<h2>Script Explanation<a class="headerlink" href="#script-explanation" title="Permalink to this heading"></a></h2>
+<p>Let’s break down each section of the script:</p>
+<ol class="arabic simple">
+<li><p><strong>Custom Color</strong>
+- This section sets the color value for <cite>cbutton.val</cite>. This color is used to define the appearance of various elements within the interface.</p></li>
+<li><p><strong>Navigation Drawer (Nav Drawer)</strong>
+- The navigation drawer is visually defined with circular buttons and lines forming a rectangular shape. Colors are based on the specified <cite>color</cite> variable.</p></li>
+<li><p><strong>Menu Buttons</strong>
+- Five sets of menu buttons are defined. Each set consists of circular buttons, lines, and filled rectangles. The color is determined by <cite>cbutton.val</cite>.</p></li>
+<li><p><strong>Page Title</strong>
+- The page title section is created with two circular buttons, connecting lines, and a filled rectangle. Colors are defined by <cite>color</cite>.</p></li>
+<li><p><strong>Navigation Drawer Icons</strong>
+- Icons change according to the background color (<cite>fondo</cite>) and theme.
+- Six themes (Theme 1 to Theme 6) are defined, each with its own icon arrangement. Icons are specified using the <cite>pic</cite> command.
+- For each theme, icons for menu buttons are also defined.</p></li>
+<li><p><strong>Page Text</strong>
+- Text elements (<cite>xstr</cite>) are used to display menu item names.
+- Text content is determined by the selected language (<cite>sys0</cite>), with support for Spanish, Italian, French, English, German, and Portuguese.</p></li>
+</ol>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading"></a></h2>
+<p>This documentation provides a comprehensive overview of the Nextion display script, including its structure, elements, and customization options. Developers can use this script as a reference to create interactive user interfaces for Nextion displays, tailoring colors, icons, and text to suit their application’s requirements.</p>
+<p>Please note that this script is an example and should be adapted to meet the specific needs of your Nextion display project.</p>
+</section>
+<section id="preinitialize-event-pantalla">
+<h2>Preinitialize event Pantalla<a class="headerlink" href="#preinitialize-event-pantalla" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Changes the page&#39;s background color</span>
+<span class="nx">Pantalla</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">fondo</span>
+<span class="c1">// Sets the main color of the buttons</span>
+<span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mh">0xDF39</span>
+<span class="c1">// Custom command see README.md file to learn more.</span>
+<span class="nx">printh</span><span class="w"> </span><span class="mf">52</span><span class="w"> </span><span class="nx">FE</span><span class="w"> </span><span class="nx">FF</span><span class="w"> </span><span class="nx">FF</span><span class="w"> </span><span class="nx">FF</span>
+</pre></div>
+</div>
+</section>
+<section id="postinitialize-event-pantalla">
+<h2>Postinitialize event Pantalla<a class="headerlink" href="#postinitialize-event-pantalla" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="nx">color</span>
+<span class="c1">//Nav Drawer start</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">470</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">470</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">90</span><span class="p">,</span><span class="mf">420</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">50</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="mf">50</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Nav Drawer end</span>
+<span class="c1">//Menu buttons start</span>
+<span class="c1">//First button</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="c1">//Second button</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">740</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="c1">//Third button</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="c1">//Fourth button</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">740</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="c1">//Fifth button</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">290</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">290</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">320</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">320</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="c1">//Menu buttons end</span>
+<span class="c1">//Page title start</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">330</span><span class="p">,</span><span class="mf">40</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">520</span><span class="p">,</span><span class="mf">40</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">330</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">520</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">330</span><span class="p">,</span><span class="mf">70</span><span class="p">,</span><span class="mf">520</span><span class="p">,</span><span class="mf">70</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">330</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">190</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Page title end</span>
+<span class="c1">//Nav Drawer icons start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">0</span>
+<span class="w">  </span><span class="c1">//Theme 1</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">78</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">144</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">146</span>
+<span class="w">  </span><span class="c1">//Button&#39;s icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">349</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">350</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">351</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">352</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">353</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">0</span>
+<span class="w">  </span><span class="c1">//Theme 2</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">89</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">148</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">150</span>
+<span class="w">  </span><span class="c1">//Button&#39;s icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">354</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">355</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">356</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">357</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">358</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">0</span>
+<span class="w">  </span><span class="c1">//Theme 3</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">100</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">152</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">154</span>
+<span class="w">  </span><span class="c1">//Button&#39;s icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">359</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">360</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">361</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">362</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">363</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">0</span>
+<span class="w">  </span><span class="c1">//Theme 4</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">111</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">156</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">158</span>
+<span class="w">  </span><span class="c1">//Button&#39;s icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">364</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">365</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">366</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">367</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">368</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">65535</span>
+<span class="w">  </span><span class="c1">//Theme 5</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">122</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">160</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">162</span>
+<span class="w">  </span><span class="c1">//Button&#39;s icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">369</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">370</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">371</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">372</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">373</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">65535</span>
+<span class="w">  </span><span class="c1">//Theme 6</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">133</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">164</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">166</span>
+<span class="w">  </span><span class="c1">//Button&#39;s icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">374</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">375</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">376</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">377</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">378</span>
+<span class="p">}</span>
+<span class="c1">//Nav Drawer icons end</span>
+<span class="c1">//Page text start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Spanish</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">355</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">140</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Pantalla&quot;</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Fecha/Hora&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Color del sistema&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Memoria&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Unidades&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Configuración&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">1</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Italian</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">355</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">140</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Schermo&quot;</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Data/Ora&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Colore di sistema&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Memoria&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Unità&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Collocamento&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">2</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//French</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">355</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">140</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Écran&quot;</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Date/Heure&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Couleur du système&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mémoire&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Unités&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Paramètre&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//English</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">355</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">140</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Display&quot;</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Date/Hour&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;System color&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Memory&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Units&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Settings&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">4</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//German</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">355</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">140</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Bildschirm&quot;</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Datum/Stunde&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Systemfarbe&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Speicher&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Einheiten&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Einstellung&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">5</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Portuguese</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">355</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">140</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Tela&quot;</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Data/Hora&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Cor do sistema&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Memória&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Unidades&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Configuração&quot;</span>
+<span class="p">}</span>
+<span class="c1">//Page text end</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-m0">
+<h2>Touch press event m0<a class="headerlink" href="#touch-press-event-m0" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">fondo</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-m0">
+<h2>Touch release event m0<a class="headerlink" href="#touch-release-event-m0" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">349</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">354</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">359</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">364</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">369</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">374</span>
+<span class="p">}</span>
+<span class="c1">//Page text start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Fecha/Hora&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">1</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Italian</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Data/Ora&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">2</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//French</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Date/Heure&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//English</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Date/Hour&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">4</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//German</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Datum/Stunde&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">5</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Portuguese</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Data/Hora&quot;</span>
+<span class="p">}</span>
+<span class="c1">//Page text end</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">Advertencia</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-m1">
+<h2>Touch press event m1<a class="headerlink" href="#touch-press-event-m1" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">740</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">fondo</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-m1">
+<h2>Touch release event m1<a class="headerlink" href="#touch-release-event-m1" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">740</span><span class="p">,</span><span class="mf">130</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">350</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">355</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">360</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">365</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">370</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">115</span><span class="p">,</span><span class="mf">375</span>
+<span class="p">}</span>
+<span class="c1">//Page text start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Spanish</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Color del sistema&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">1</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Italian</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Colore di sistema&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">2</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//French</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Couleur du système&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//English</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;System color&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">4</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//German</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Systemfarbe&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">5</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Portuguese</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Cor do sistema&quot;</span>
+<span class="p">}</span>
+<span class="c1">//Page text end</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">ColorS</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-m2">
+<h2>Touch press event m2<a class="headerlink" href="#touch-press-event-m2" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">fondo</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-m2">
+<h2>Touch release event m2<a class="headerlink" href="#touch-release-event-m2" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">351</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">356</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">361</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">366</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">371</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">376</span>
+<span class="p">}</span>
+<span class="c1">//Page text start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Spanish</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Memoria&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">1</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Italian</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Memoria&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">2</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//French</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mémoire&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//English</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Memory&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">4</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//German</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Reinigung&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">5</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Portuguese</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Memória&quot;</span>
+<span class="p">}</span>
+<span class="c1">//Page text end</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">Memoria</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-m3">
+<h2>Touch press event m3<a class="headerlink" href="#touch-press-event-m3" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">740</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">fondo</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-m3">
+<h2>Touch release event m3<a class="headerlink" href="#touch-release-event-m3" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">740</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">740</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">180</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">352</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">357</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">362</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">367</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">372</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="mf">195</span><span class="p">,</span><span class="mf">377</span>
+<span class="p">}</span>
+<span class="c1">//Page text start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Spanish</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Unidades&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">1</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Italian</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Unità&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">2</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//French</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Unités&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//English</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Units&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">4</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//German</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Einheiten&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">5</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Portuguese</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">550</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Unidades&quot;</span>
+<span class="p">}</span>
+<span class="c1">//Page text end</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-m4">
+<h2>Touch press event m4<a class="headerlink" href="#touch-press-event-m4" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">290</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">290</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">320</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">320</span><span class="p">,</span><span class="nx">fondo</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">fondo</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-m4">
+<h2>Touch release event m4<a class="headerlink" href="#touch-release-event-m4" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">290</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">290</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">390</span><span class="p">,</span><span class="mf">320</span><span class="p">,</span><span class="mf">390</span><span class="p">,</span><span class="mf">320</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">260</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">cbutton</span><span class="p">.</span><span class="nx">val</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">353</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">358</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">363</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">368</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">373</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Buttons icons</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">275</span><span class="p">,</span><span class="mf">378</span>
+<span class="p">}</span>
+<span class="c1">//Page text start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Spanish</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Configuración&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">1</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Italian</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Collocamento&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">2</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//French</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Paramètre&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//English</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Settings&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">4</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//German</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Einstellung&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">5</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Portuguese</span>
+<span class="w">  </span><span class="c1">//Buttons text</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="mf">280</span><span class="p">,</span><span class="mf">250</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">BLACK</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Configuração&quot;</span>
+<span class="p">}</span>
+<span class="c1">//Page text end</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">PConfig</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-binfopa">
+<h2>Touch press event bInfoPa<a class="headerlink" href="#touch-press-event-binfopa" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//changes the images according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">79</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">90</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">101</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">112</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">123</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">134</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+<span class="nx">Info</span><span class="p">.</span><span class="nx">returnPage</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="nx">dp</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-binfopa">
+<h2>Touch release event bInfoPa<a class="headerlink" href="#touch-release-event-binfopa" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//restores the images according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">78</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">89</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">100</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">111</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">122</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">133</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">Info</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-bhomepa">
+<h2>Touch press event bHomePa<a class="headerlink" href="#touch-press-event-bhomepa" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Changes the image according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">145</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">149</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">153</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">157</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">161</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">165</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-bhomepa">
+<h2>Touch release event bHomePa<a class="headerlink" href="#touch-release-event-bhomepa" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Restores the image according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">144</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">148</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">152</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">156</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">160</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">164</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">Home</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-bbackpa">
+<h2>Touch press event bBackPa<a class="headerlink" href="#touch-press-event-bbackpa" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Changes the image according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">147</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">151</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">155</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">159</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">163</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">167</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-bbackpa">
+<h2>Touch release event bBackPa<a class="headerlink" href="#touch-release-event-bbackpa" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Restores the image according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">146</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">150</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">154</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">159</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">162</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">166</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">MenuConf</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pconfig.html" class="btn btn-neutral float-left" title="PConfig Nextion Page" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="popup.html" class="btn btn-neutral float-right" title="Popup Nextion Page" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ernesto Estrada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
