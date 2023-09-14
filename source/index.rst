@@ -58,6 +58,9 @@ Check out the :doc:`usage` section for further information, including how to
    limites2
    limites3
    limites4
+   machineparam
+   memoria
+   mensajes
 
 Indices and tables
 ==================
