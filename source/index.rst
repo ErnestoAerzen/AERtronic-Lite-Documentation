@@ -51,6 +51,13 @@ Check out the :doc:`usage` section for further information, including how to
    hora
    idiomas
    insesion
+   info
+   inicio
+   intervalos
+   limites
+   limites2
+   limites3
+   limites4
 
 Indices and tables
 ==================

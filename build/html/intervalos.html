@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intervalos Nextion Page &mdash; AERtronic-Lite-Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Limites Nextion Page" href="limites.html" />
+    <link rel="prev" title="Inicio Nextion Page" href="inicio.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AERtronic-Lite-Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">AERtronic Lite Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech.html">Languages and Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.html">Src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functionality.html">Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus.html">Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeESP.html">TimeESP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advertencia.html">Advertencia Nextion page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">ColorS Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comunicacion.html">Comunicacion Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confirmarm.html">ConfirmarM Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contador.html">Contador Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlsystem.html">ControlSystem Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estadomodulo.html">EstadoModulo System Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos1.html">Eventos1 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos2.html">Eventos2 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos3.html">Eventos3 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos4.html">Eventos4 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos5.html">Eventos5 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos6.html">Eventos6 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventos7.html">Eventos7 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fecha.html">Fecha Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="home.html">Fecha Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hora.html">Hora Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="idiomas.html">Idiomas Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="insesion.html">InSesion Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html">Info Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inicio.html">Inicio Nextion Page</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Intervalos Nextion Page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-structure">Script Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-drawer-nav-drawer"><strong>Navigation Drawer (Nav Drawer)</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-drawer-icons"><strong>Navigation Drawer Icons</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#page-title"><strong>Page Title</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#containers"><strong>Containers</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#page-text"><strong>Page Text</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#textboxes"><strong>Textboxes</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributors">Contributors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-history">Version History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preinitialize-event-intervalos">Preinitialize event Intervalos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#postinitialize-event-intervalos">Postinitialize event Intervalos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-binfoin">Touch press event bInfoIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-binfoin">Touch release event bInfoIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-bhomein">Touch press event bHomeIn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-bhomein">Touch release event bHomeIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-press-event-bbackin">Touch press event bBackIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#touch-release-event-bbackin">Touch release event bBackIN</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="limites.html">Limites Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limites2.html">Limites2 Nextion Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limites3.html">Limites3 Nextion Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AERtronic-Lite-Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Intervalos Nextion Page</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/intervalos.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="intervalos-nextion-page">
+<h1>Intervalos Nextion Page<a class="headerlink" href="#intervalos-nextion-page" title="Permalink to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>This document provides a detailed explanation of the Nextion display script, which is divided into several sections. The script is designed to enhance the user interface and functionality of a Nextion display. It includes components for creating a navigation drawer, customizing icons based on themes, displaying page titles, defining containers, and setting up textboxes.</p>
+</section>
+<section id="script-structure">
+<h2>Script Structure<a class="headerlink" href="#script-structure" title="Permalink to this heading"></a></h2>
+<p>The script comprises the following sections:</p>
+<section id="navigation-drawer-nav-drawer">
+<h3><strong>Navigation Drawer (Nav Drawer)</strong><a class="headerlink" href="#navigation-drawer-nav-drawer" title="Permalink to this heading"></a></h3>
+<p>This section creates a navigation drawer with circular buttons, lines, and filled rectangles to define its appearance. The buttons and shapes are positioned at specific coordinates and use the “color” parameter for their appearance.</p>
+</section>
+<section id="navigation-drawer-icons">
+<h3><strong>Navigation Drawer Icons</strong><a class="headerlink" href="#navigation-drawer-icons" title="Permalink to this heading"></a></h3>
+<p>Conditional logic is used to customize the icons within the navigation drawer based on the value of the “fondo” variable, which likely represents different themes. Each theme is associated with specific font colors and a unique set of icons. Icons are displayed using the “pic” command at defined coordinates (25, 30), (25, 120), and (25, 400), each with its respective index value.</p>
+<p>Font colors for textboxes (tman1 to tman9) are also set based on the selected theme by modifying the “tmanX.pco” attribute.</p>
+</section>
+<section id="page-title">
+<h3><strong>Page Title</strong><a class="headerlink" href="#page-title" title="Permalink to this heading"></a></h3>
+<p>This section defines a page title area with circular buttons and lines. The title area is visually separated from the navigation drawer. Buttons and shapes are positioned at specific coordinates and use the “color” parameter for their appearance.</p>
+</section>
+<section id="containers">
+<h3><strong>Containers</strong><a class="headerlink" href="#containers" title="Permalink to this heading"></a></h3>
+<p>This section defines multiple containers, each comprising circular buttons, lines, and filled rectangles. These containers are organized into a grid layout. Each container is enclosed within lines, and filled rectangles visually distinguish the different sections. Buttons and shapes are positioned at specific coordinates and use the “color” parameter for their appearance.</p>
+</section>
+<section id="page-text">
+<h3><strong>Page Text</strong><a class="headerlink" href="#page-text" title="Permalink to this heading"></a></h3>
+<p>Text is displayed on the page using the “xstr” command. The displayed text varies based on the value of the “sys0” variable, which presumably represents different language options. For each language option, the script defines specific text content for the page titles and container sections.</p>
+</section>
+<section id="textboxes">
+<h3><strong>Textboxes</strong><a class="headerlink" href="#textboxes" title="Permalink to this heading"></a></h3>
+<p>This section customizes the appearance of textboxes (tman1 to tman9) within the navigation drawer. The “tmanX.bco” attribute is set to control the background color of these textboxes, likely to match the theme selected in the navigation drawer.</p>
+</section>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>This script is intended for use with the Nextion Editor, a visual interface design tool for Nextion displays. It enhances the user experience by creating a visually appealing and functional interface with customizable themes and multilingual support.</p>
+<p>To implement this script effectively, ensure that the Nextion display is configured to handle the defined elements, such as timers, icons, textboxes, and containers. Additionally, ensure that the necessary font colors, icon images, and text content are available and properly configured within the Nextion Editor.</p>
+<p>Users can interact with the display, select themes from the navigation drawer, and view content in their chosen language. The script provides a dynamic and engaging user interface for Nextion displays.</p>
+</section>
+<section id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>[Your Name/Team Name]</p></li>
+</ul>
+</section>
+<section id="version-history">
+<h2>Version History<a class="headerlink" href="#version-history" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Version 1.0: [Date of Initial Release]</p></li>
+</ul>
+</section>
+<section id="disclaimer">
+<h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this heading"></a></h2>
+<p>[Include any necessary disclaimers or legal information here.]</p>
+<p><strong>Note:</strong> This documentation may undergo updates and improvements as needed.</p>
+<p>For the most up-to-date information and documentation, refer to the official Nextion Display resources.</p>
+</section>
+<section id="preinitialize-event-intervalos">
+<h2>Preinitialize event Intervalos<a class="headerlink" href="#preinitialize-event-intervalos" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Changes the background color of the page</span>
+<span class="nx">Intervalos</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">fondo</span>
+<span class="c1">// Sends the current page number over serial</span>
+<span class="nx">sendme</span>
+</pre></div>
+</div>
+</section>
+<section id="postinitialize-event-intervalos">
+<h2>Postinitialize event Intervalos<a class="headerlink" href="#postinitialize-event-intervalos" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Nav Drawer start</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">100</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">470</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">470</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">90</span><span class="p">,</span><span class="mf">420</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">50</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="mf">450</span><span class="p">,</span><span class="mf">50</span><span class="p">,</span><span class="mf">20</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Nav Drawer end</span>
+<span class="c1">//Nav Drawer icons start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">0</span>
+<span class="w">  </span><span class="nx">tman1</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman2</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman3</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman4</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman5</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman6</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman7</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman8</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman9</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="c1">//Theme 1</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">78</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">144</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">146</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">0</span>
+<span class="w">  </span><span class="nx">tman1</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman2</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman3</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman4</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman5</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman6</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman7</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman8</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman9</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="c1">//Theme 2</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">89</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">148</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">150</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">0</span>
+<span class="w">  </span><span class="nx">tman1</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman2</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman3</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman4</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman5</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman6</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman7</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman8</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman9</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="c1">//Theme 3</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">100</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">152</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">154</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">0</span>
+<span class="w">  </span><span class="nx">tman1</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman2</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman3</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman4</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman5</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman6</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman7</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman8</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman9</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="c1">//Theme 4</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">111</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">156</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">158</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">65535</span>
+<span class="w">  </span><span class="nx">tman1</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman2</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman3</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman4</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman5</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman6</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman7</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman8</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman9</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="c1">//Theme 5</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">122</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">160</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">162</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Font color</span>
+<span class="w">  </span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="mf">65535</span>
+<span class="w">  </span><span class="nx">tman1</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman2</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman3</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman4</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman5</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman6</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman7</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman8</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="nx">tman9</span><span class="p">.</span><span class="nx">pco</span><span class="o">=</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span>
+<span class="w">  </span><span class="c1">//Theme 6</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">133</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">164</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">166</span>
+<span class="p">}</span>
+<span class="c1">//Nav Drawer icons end</span>
+<span class="c1">//Page title start</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">310</span><span class="p">,</span><span class="mf">40</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">540</span><span class="p">,</span><span class="mf">40</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">310</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">540</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">310</span><span class="p">,</span><span class="mf">70</span><span class="p">,</span><span class="mf">540</span><span class="p">,</span><span class="mf">70</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">310</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Page title end</span>
+<span class="c1">//Containers start</span>
+<span class="c1">//First container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">120</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">120</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">330</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Second container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">530</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">530</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">350</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">350</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">350</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">560</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">560</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Third container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">760</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="mf">760</span><span class="p">,</span><span class="mf">200</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">80</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">580</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">580</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">580</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">790</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">790</span><span class="p">,</span><span class="mf">170</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">110</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Fourth container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">120</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">120</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">330</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Fifth container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">530</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="mf">530</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">350</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">350</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">350</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">560</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">560</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Sixth container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">760</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="mf">760</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">210</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">580</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">580</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">580</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">790</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">790</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">240</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Seventh container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">460</span><span class="p">,</span><span class="mf">300</span><span class="p">,</span><span class="mf">460</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">120</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">120</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">330</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">330</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Eighth container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="mf">530</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">460</span><span class="p">,</span><span class="mf">530</span><span class="p">,</span><span class="mf">460</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">380</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">350</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">350</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">350</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">560</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">560</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">530</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Nineth container</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">cirs</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="mf">760</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">460</span><span class="p">,</span><span class="mf">760</span><span class="p">,</span><span class="mf">460</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">610</span><span class="p">,</span><span class="mf">340</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">580</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">580</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">580</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">line</span><span class="w"> </span><span class="mf">790</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">790</span><span class="p">,</span><span class="mf">430</span><span class="p">,</span><span class="nx">color</span>
+<span class="nx">fill</span><span class="w"> </span><span class="mf">760</span><span class="p">,</span><span class="mf">370</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">60</span><span class="p">,</span><span class="nx">color</span>
+<span class="c1">//Containers end</span>
+<span class="c1">//Page text start</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">0</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Spanish</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">320</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">220</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Intervalos de servicio&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mantenimiento 500 h de operación&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mantenimiento del motor&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Periodo de lubricación del motor&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mantenimiento 4000 h de funcionamiento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mantenimiento 8000 h de funcionamiento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mantenimiento 16000 h de funcionamiento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mantenimiento 20000 h de funcionamiento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mantenimiento 30000 h de funcionamiento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Mantenimiento 40000 h de funcionamiento&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">1</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Italian</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">320</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">220</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Intervalli di servizio&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenzione 500 h di funzionamento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenzione del motore&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Periodo di lubrificazione del motore&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenzione 4000 h di funzionamento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenzione 8000 h di funzionamento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenzione 16000 h di funzionamento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenzione 20000 h di funzionamento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenzione 30000 h di funzionamento&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenzione 40000 h di funzionamento&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">2</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//French</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">320</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">220</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Intervalles d&#39;entretien&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 500 h de fonctionnement&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Entretien moteur&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Période de lubrification du moteur&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 4000 h de fonctionnement&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 8000 h de fonctionnement&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 16000 h de fonctionnement&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 20000 h de fonctionnement&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 30000 h de fonctionnement&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 40000 h de fonctionnement&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">3</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//English</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">320</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">220</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Service intervals&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 500 h of operation&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Motor maintenance&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Motor lubrication period&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 4000 h of operation&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 8000 h of operation&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 16000 h of operation&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 20000 h of operation&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 30000 h of operation&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Maintenance 40000 h of operation&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">4</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//German</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">320</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">220</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Wartungsintervalle&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Wartung 500 h Betrieb&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Motorwartung&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Zeitraum der Motorschmierung&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Wartung 4000 Betriebsstunden&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Wartung 8000 Betriebsstunden&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Wartung 16000 Betriebsstunden&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Wartung 20000 Betriebsstunden&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Wartung 30000 Betriebsstunden&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Wartung 40000 Betriebsstunden&quot;</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">sys0</span><span class="o">==</span><span class="mf">5</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">//Portuguese</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">320</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">220</span><span class="p">,</span><span class="mf">25</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Intervalos de serviço&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">150</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenção 500 h de operação&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenção do motor&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">85</span><span class="p">,</span><span class="mf">160</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Período de lubrificação do motor&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenção 4000 h de operação&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">155</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenção 8000 h de operação&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">225</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenção 16000 h de operação&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">145</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenção 20000 h de operação&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">375</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenção 30000 h de operação&quot;</span>
+<span class="w">  </span><span class="nx">xstr</span><span class="w"> </span><span class="mf">605</span><span class="p">,</span><span class="mf">345</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">45</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="nx">fontColor</span><span class="p">.</span><span class="nx">val</span><span class="p">,</span><span class="nx">color</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;Manutenção 40000 h de operação&quot;</span>
+<span class="p">}</span>
+<span class="c1">//Page text end</span>
+<span class="c1">//Textboxes start</span>
+<span class="nx">tman1</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="nx">tman2</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="nx">tman3</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="nx">tman4</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="nx">tman5</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="nx">tman6</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="nx">tman7</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="nx">tman8</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="nx">tman9</span><span class="p">.</span><span class="nx">bco</span><span class="o">=</span><span class="nx">color</span>
+<span class="c1">//Textboxes end</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-binfoin">
+<h2>Touch press event bInfoIN<a class="headerlink" href="#touch-press-event-binfoin" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//changes the images according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">79</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">90</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">101</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">112</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">123</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">134</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+<span class="nx">Info</span><span class="p">.</span><span class="nx">returnPage</span><span class="p">.</span><span class="nx">val</span><span class="o">=</span><span class="nx">dp</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-binfoin">
+<h2>Touch release event bInfoIN<a class="headerlink" href="#touch-release-event-binfoin" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//restores the images according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">78</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">89</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">100</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">111</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">122</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">30</span><span class="p">,</span><span class="mf">133</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">Info</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-bhomein">
+<h2>Touch press event bHomeIn<a class="headerlink" href="#touch-press-event-bhomein" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Changes the image according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">145</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">149</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">153</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">157</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">161</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">165</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-bhomein">
+<h2>Touch release event bHomeIN<a class="headerlink" href="#touch-release-event-bhomein" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Restores the image according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">144</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">148</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">152</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">156</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">160</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">120</span><span class="p">,</span><span class="mf">164</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">Home</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-press-event-bbackin">
+<h2>Touch press event bBackIN<a class="headerlink" href="#touch-press-event-bbackin" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Changes the image according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">147</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">151</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">155</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">159</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">163</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">167</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-release-event-bbackin">
+<h2>Touch release event bBackIN<a class="headerlink" href="#touch-release-event-bbackin" title="Permalink to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//Restores the image according the theme selected</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65534</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">146</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63391</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">150</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">65438</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">154</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">63421</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">159</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">6339</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">162</span>
+<span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">fondo</span><span class="o">==</span><span class="mf">8484</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">pic</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="mf">400</span><span class="p">,</span><span class="mf">166</span>
+<span class="p">}</span>
+<span class="c1">//</span>
+<span class="nx">page</span><span class="w"> </span><span class="nx">Menu</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="inicio.html" class="btn btn-neutral float-left" title="Inicio Nextion Page" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="limites.html" class="btn btn-neutral float-right" title="Limites Nextion Page" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ernesto Estrada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
