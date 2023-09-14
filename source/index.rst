@@ -66,6 +66,14 @@ Check out the :doc:`usage` section for further information, including how to
    pconfig
    pantalla
    popup
+   presion
+   resetev
+   resetmant
+   selectlanguage
+   temperatura
+   tiempos
+   varios
+   menuservicio
 
 Indices and tables
 ==================
