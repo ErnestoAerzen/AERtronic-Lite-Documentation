@@ -6,7 +6,7 @@
 Welcome to AERtronic Lite Documentation!
 ========================================================
 
-This project presents a comprehensive solution for the current AERtronic Advanced in LATAM. The primary objective is to develop a new and improved MCU to replace the existing module, dedicated to displaying precise readings from pressure and temperature sensors.
+This project presents a comprehensive solution for the current AERtronic Advanced in LATAM. The primary objective is to develop a new and improved LCU to replace the existing module, dedicated to displaying precise readings from pressure and temperature sensors.
 
 To achieve this, we are embarking on the development of a sophisticated interface from the ground up, utilizing an 800x480px Nextion Display. Leveraging the powerful Nextion editor and the Arduino platform, we will meticulously replicate the core functionality of the AERtronic Advanced at its fundamental level.
 
